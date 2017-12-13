@@ -1,0 +1,44 @@
+body,
+html
+  font 400 100%/1.4 'Poppins', sans-serif
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+body
+  background-color white
+
+  &.menu-on
+    overflow hidden
+
+.conteiner-principal
+  padding-top 120px
+
+.titulo
+  font-family 'Poppins', sans-serif
+
+.conteiner
+  width calc(100% - 30px)
+
+.utils
+  display none
+
+::-webkit-scrollbar
+  height 5px
+  width 5px
+
+::-webkit-scrollbar-track
+  background-color #f7f7f7
+
+
+::-webkit-scrollbar-thumb
+  background-color $cor01
+
+::-moz-selection {
+  background-color rgba(20, 50, 90, .8)
+  color white
+}
+
+::selection {
+  background-color rgba(20, 50, 90, .8)
+  color white
+}
