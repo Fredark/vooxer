@@ -1,0 +1,63 @@
+<div class="header-lane">
+    <div class="center header-lane__center">
+        {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="logo" imagem="wysiwyg/Loja/logo.png" imagem_mobile="wysiwyg/Loja/logo.png" alt_imagem="Bom Gosto Enxovais" tag_html="div" tag_html_home="h1"}}
+        <div class="header-lane__right">
+            <div class="header-lane__top">
+                {{widget type="interface/widget_login" template="interface/widgets/login.phtml" identificador="account" login_convidado="<div class='welcome-message'>Seja bem-vindo(a)!</div><div class='user-links icon--user'> <a class='user-links__link user-links__link--first' href='@url-login'>Entre</a> ou <a class='user-links__link user-links__link--second' href='@url-cadastro'>Cadastre-se</a></div>" login_cliente="<div class='welcome-message'>Seja bem-vindo(a) <span class="welcome-message__name">@nome-usuario</span>!</div><div class='user-links icon--user'> <a class='user-links__link user-links__link--first' href='@url-conta'>Minha Conta</a> ou <a class='user-links__link user-links__link--second' href='@url-logout'>Sair</a></div>"}}
+                <div class="phones icon--phone">
+                    Fale conosco:
+                    <a class="phones__item" href="tel:+55433551-1083">
+                        (43) 3551-1083
+                    </a>
+                </div>
+            </div>
+            <div class="header-lane__bottom">
+                {{widget type="interface/widget_busca" template="interface/widgets/busca.phtml" busca_identificador="search" busca_css="search" busca_exibir_filtro="1" busca_texto="<span class='icon--search'></span>" busca_label="<span class='search__span'>Busca</span>" busca_placeholder="busque aqui o que você precisa..."}}
+                {{widget type="interface/widget_suacesta" template="interface/widgets/suacesta.phtml" identificador="cart" texto_singular="<a class='cart icon--cart' href='@url-carrinho'> <div class='cart__info'> Meu Carrinho (@qtd-carrinho) </div></a>" texto_plural="<a class='cart icon--cart' href='@url-carrinho'> <div class='cart__info'> Meu Carrinho (@qtd-carrinho) </div></a>"}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ruler-lane">
+    <div class="center ruler-lane__center">
+        <ul class="ruler-list">
+            <li class="ruler-list__item">
+                <span class="ruler-list__title ruler-list__icon icon--shipping">
+                    Frete Grátis
+                </span>
+                <span class="ruler-list__desc">
+                    {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="26"}}
+                </span>
+            </li>
+            <li class="ruler-list__item">
+                <span class="ruler-list__title ruler-list__icon icon--cards">
+                    Parcelamento
+                </span>
+                <span class="ruler-list__desc">
+                    {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="27"}}
+                </span>
+            </li>
+            <li class="ruler-list__item">
+                <span class="ruler-list__title ruler-list__icon icon--safe">
+                    Segurança
+                </span>
+                <span class="ruler-list__desc">
+                    {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="28"}}
+                </span>
+            </li>
+            <li class="ruler-list__item">
+                <span class="ruler-list__title ruler-list__icon icon--whatsapp">
+                    Whatsapp
+                </span>
+                <span class="ruler-list__desc">
+                    {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="29"}}
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="menu-lane">
+    <div class="center menu-lane__center">
+        {{widget type="interface/widget_menu" template="interface/widgets/menu.phtml" identificador="menu" exibicao="normal" exibir_todos_departamentos="1" texto_todos_departamentos="<span class='icon--menu'></span>" posicionar_automaticamente="0" ajustar_largura="1" exibir_banner="1" niveis="2" ocultar_categorias="3,4,5,6,7,8,9,10"}}
+    </div>
+</div>

@@ -1,9 +1,21 @@
 body,
 html
-  font 400 100%/1.4 'Poppins', sans-serif
+  font 400 100%/1 'Montserrat', sans-serif
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+.center
+  display block
+  margin 0 auto
+  max-width 1140px
+  width calc(100% - 30px)
+
+[class*="icon--"]
+  align-items center
+  display inline-flex
+
+  &:before
+    flex 0 0 auto
 
 ::-webkit-scrollbar
   height 5px
@@ -16,12 +28,11 @@ html
 ::-webkit-scrollbar-thumb
   background-color $cor01
 
-::-moz-selection {
-  background-color rgba(20, 50, 90, .8)
+::-moz-selection
+  background-color rgba(127, 203, 174, .8)
   color white
-}
 
-::selection {
-  background-color rgba(20, 50, 90, .8)
+
+::selection
+  background-color rgba(127, 203, 174, .8)
   color white
-}
