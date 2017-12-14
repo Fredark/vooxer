@@ -156,7 +156,6 @@
 .header
   .mycart
     height auto
-    margin-left 20px
 
 .icon--cart
   &:before
@@ -170,14 +169,143 @@
   letter-spacing .29px
   transition all 150ms ease-in-out
 
+.header
+  .mycart
+    margin -9px -18px 0 0
+
 .mycart
+  position relative
 
   &:hover
     .cart__info
       color $cor01
 
+    &:not(.mycart--empty)
+      .mycart__header
+        a
+          box-shadow 0 2px 6px 0 rgba(34, 31, 31, .29)
+
     .mycart__content
+      opacity 1
+      visibility visible
+      z-index 300
+
+  .mycart__content
+    border 0 none
+    box-shadow 0 2px 6px 0 rgba(34, 31, 31, .29)
+    display block
+    padding 15px
+    opacity 0
+    right 0
+    visibility hidden
+    transition all 150ms ease-in-out
+    position absolute
+    z-index -1
+    width 405px
+
+    .title
       display none
+
+.mycart__list
+  padding 0
+  margin 0
+
+.mycart__details
+  align-items center
+  display flex
+
+  .price
+    color $cor01
+    font-size 14px
+    font-weight 700
+    flex 0 0 auto
+    letter-spacing .1px
+    margin-left 15px
+
+.mycart__qtd
+  display none
+
+.mycart__name
+  margin 0
+
+  span
+    color #959595
+    display block
+    font-size 11px
+    font-weight 500
+    letter-spacing .3px
+    line-height 14px
+    max-height 42px
+    overflow hidden
+    text-transform uppercase
+    transition all 150ms ease-in-out
+
+    &:hover
+      color $cor01
+
+.mycart__header
+  position relative
+  z-index 400
+  a
+    background-color white
+    padding 16px 18px 7px 20px
+    position relative
+    transition all 150ms ease-in-out
+
+    &:after
+      background-color white
+      bottom -8px
+      content ''
+      height 15px
+      left 0
+      position absolute
+      transition all 150ms ease-in-out
+      width 100%
+      z-index 100
+
+.mycart__item
+  border 1px solid #ebebeb
+  margin-bottom 10px
+  padding 10px 25px 10px 10px
+  transition all 150ms ease-in-out
+
+  &:hover
+    border-color $cor01
+
+  &:last-child
+    margin-bottom 0
+
+.mycart__thumb
+  align-items center
+  display flex
+  height 60px
+  justify-content center
+  width 60px
+
+  img
+    height auto
+    max-height 100%
+    max-width 100%
+    width auto
+
+.mycart__remove
+  border-radius 0
+  left auto
+  line-height 0
+  padding 0
+  right 8px
+  top 8px
+
+  &:hover
+    background-color transparent
+
+    &:before
+      content svg-inline(close-hover)
+
+  &:before
+    content svg-inline(close)
+    display block
+
 
 .ruler-list
   align-items center
