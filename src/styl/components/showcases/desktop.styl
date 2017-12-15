@@ -1,0 +1,187 @@
+.icon--tag
+  &:before
+    content svg-inline(tag)
+
+.main .col-main .products
+  margin-bottom 35px
+
+.products__title
+  margin-bottom 25px
+
+.showcase__title
+.showcase__sub
+  display block
+  text-align center
+
+.showcase__title.icon--tag
+  display block
+
+  &:before
+    display block
+    margin-bottom 8px
+
+.showcase__title
+  color #343434
+  font-size 25px
+  font-weight 500
+  letter-spacing .49px
+  line-height 1
+  margin-bottom 5px
+  text-transform uppercase
+
+.showcase__sub
+  color #9e9e9e
+  font-size 15px
+  font-weight 400
+  letter-spacing .99px
+  line-height 1
+
+.products__list
+  margin 0 -15px
+
+.products__item
+  flex 1 1 200px
+  margin-bottom 45px
+  padding 0 15px
+
+.product__image
+  max-width 240px
+  height 240px
+  padding 0
+
+
+.products__case
+  align-items center
+  box-shadow 0 1px 8px 0 rgba(1, 1, 1, .09)
+  height 400px
+  justify-content center
+  padding 10px
+  transition all 150ms ease-in-out
+
+  &:hover
+    box-shadow 0 8px 49px 0 rgba(1, 1, 1, .17)
+    height 412px
+    margin-top -12px
+
+    .product__name
+      height 0
+
+    .product__prices
+      justify-content center
+      border 0 none
+      height 78px
+      margin-top 0
+
+    .price-box-parcelado
+      height auto
+      margin 0
+
+      .preco-parcelado
+        height 13px
+        margin-top 5px
+
+    .showcase__button
+      margin-top 6px
+
+.product__main
+  box-shadow inset 0 0 0 1px #e1e1e1
+  border-top 0 none
+  max-width 240px
+  overflow hidden
+  padding 10px 12px 0
+
+.product__name
+  color #959595
+  display block
+  font-size 11px
+  font-weight 500
+  flex 0 0 auto
+  letter-spacing .3px
+  line-height 15px
+  height 45px
+  margin 0
+  overflow hidden
+  text-transform uppercase
+
+.product__prices
+  align-items flex-start
+  border-top 1px solid #e1e1e1
+  display flex
+  flex-flow column nowrap
+  margin-top 8px
+  justify-content flex-end
+  height 70px
+  padding 10px 0
+  width 100%
+
+  .label
+    display none
+
+.showcase__buy
+  margin 7px -12px -1px
+  transition all 150ms ease-in-out
+
+  button
+    background-color $cor01
+    border 1px solid transparent
+    border-radius 0
+    box-shadow none
+    color white
+    display block
+    font-size 14px
+    font-weight 600
+    flex 0 0 auto
+    letter-spacing 1.51px
+    line-height 17px
+    height 57px
+    padding 20px 0
+    text-align center
+    text-transform uppercase
+    transition all 150ms ease-in-out
+    width 100%
+
+    &:hover
+      background-color white
+      border-color $cor01
+      color $cor01
+
+.price-box-parcelado
+  display block
+  height 13px
+  line-height 0
+  margin 5px 0 0
+  transition all 150ms ease-in-out
+
+  .preco-parcelado
+    height auto
+    margin 0
+    transition all 150ms ease-in-out
+
+.price-box
+  margin 0
+
+.product__prices
+  .regular-price
+  .special-price
+
+    .price span
+      color black
+      font-size 18px
+      font-weight 600
+      letter-spacing .5px
+      line-height 1
+
+
+
+  .preco-parcelado
+    display block
+
+    span
+      font-size 13px
+      font-weight 500
+      line-height 1
+
+    .num
+    .value
+      span
+        color black

@@ -1,0 +1,122 @@
+#banner__bannerhomefull
+  margin 0 auto 20px
+  max-width 1300px
+
+.main .col-main .banners-extras
+  margin-bottom 38px
+
+.banners-extras
+  align-items stretch
+  display flex
+  justify-content space-between
+
+  .banner--nojs .banner__item
+    overflow visible
+
+  .banner__link
+    border-radius 0
+    display inline-block
+    overflow hidden
+    position relative
+    transition all 150ms ease-in-out
+    width auto
+
+    &:hover
+      box-shadow 0 0 6px 0 rgba(0, 0, 0, .3)
+
+      img
+        transform scale(1.05)
+
+    &:before
+      background-color white
+      color $cor01
+      content attr(title)
+      font-size 13px
+      font-weight 500
+      letter-spacing .49px
+      text-transform uppercase
+      line-height 15px
+      position absolute
+      padding 11px 15px
+      transition all 150ms ease-in-out
+      top 40px
+      z-index 200
+
+    img
+      transition all 150ms ease-in-out
+
+
+.banners-extras__middle
+  display flex
+  flex-flow column nowrap
+  flex 1 1 auto
+  justify-content space-between
+  max-width 555px
+
+  > .banner:first-child
+      .banner__link
+
+        &:hover
+          &:before
+            right -100%
+
+        &:before
+          right 0
+
+.banners-extras__bottom
+  display flex
+  justify-content space-between
+
+  .banner:nth-child(1)
+    .banner__link
+
+      &:hover
+        &:before
+          left -100%
+
+      &:before
+        left 0
+
+  .banner:nth-child(2)
+    .banner__link
+
+      &:hover
+        &:before
+          right -100%
+
+      &:before
+        right 0
+
+.banners-extras__left
+.banners-extras__right
+  display flex
+  flex 1 1 200px
+  flex-flow column nowrap
+
+.banners-extras__left
+  .banner__link
+
+    &:hover
+      &:before
+        left -100%
+
+    &:before
+      left 0
+
+.banners-extras__right
+  align-items flex-end
+  justify-content space-between
+
+  .banner__link
+
+    &:hover
+      &:before
+        right -100%
+
+    &:before
+      right 0
+
+
+
+.banner--nojs .banner__wrapper
+  column-count auto

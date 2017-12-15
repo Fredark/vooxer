@@ -4,7 +4,8 @@ const package = require('./package.json');
 
 const ExtractTextPlugin  = require('extract-text-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const BrowserSyncPlugin  = require('browser-sync-webpack-plugin');
+const UglifyJsPlugin     = require('uglifyjs-webpack-plugin');
 
 const paths = {
     DIST: path.resolve(__dirname, 'dist'),
@@ -38,7 +39,8 @@ module.exports = {
 
         }),
         new ExtractTextPlugin('general.css'),
-        new SpriteLoaderPlugin({ plainSprite: true })
+        new SpriteLoaderPlugin({ plainSprite: true }),
+        new UglifyJsPlugin()
     ],
     module: {
         rules: [
