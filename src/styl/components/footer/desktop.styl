@@ -1,0 +1,353 @@
+// Newsletter
+
+.wrapper section.newsletter
+  margin-bottom 75px
+
+.newsletter__center
+  align-items stretch
+  display flex
+
+.newsletter__banner
+  flex 0 0 auto
+  max-width 60%
+
+.newsletter__info
+  align-items center
+  border 1px solid #e1e1e1
+  border-left 0 none
+  display flex
+  flex 1 1 auto
+  justify-content center
+  transition all 150ms ease-in-out
+
+  &:hover
+    border-color $cor01
+
+.newsletter__form
+  flex 1 1 auto
+  margin 0 10px
+  max-width 324px
+
+  > *
+    padding 0
+
+  .input-text
+    border 1px solid #e1e1e1 !important
+    border-radius 0 !important
+    box-shadow none
+    color #959595
+    font-size 15px
+    font-weight 500
+    height 48px
+    letter-spacing .3px
+    line-height 18px
+    padding 15px
+    transition all 150ms ease-in-out
+
+    &::placeholder
+      color #959595
+
+    &:focus
+    &:hover
+      border-color $cor01 !important
+      color #333
+
+.newsletter__name
+  margin-bottom 10px
+  order 0
+
+.newsletter__email
+  order 1
+
+.newsletter__gender
+  flex 0 0 100%
+  display flex
+  justify-content center
+  min-width 0
+  order 2
+
+.newsletter__submit
+  order 3
+
+.newsletter
+  .male-label
+  .female-label
+    border 0 none
+    border-radius 0
+    color #959595
+    flex 0 0 auto
+    font-size 15px
+    font-weight 500
+    letter-spacing .3px
+    line-height 49px
+    padding 0
+    transition all 150ms ease-in-out
+
+    &:before
+      display none
+
+    &.checked
+      background-color transparent
+      border-color transparent
+      color $cor01
+
+  .female-label
+    margin-right 30px
+    order 0
+
+  .male-label
+    order 1
+
+  .input-radio
+    position static
+
+
+// About us
+.wrapper .about-us
+  display flex
+  justify-content center
+  margin-bottom 0
+
+.about-us__center
+  &:before
+    flex 0 0 auto
+    margin-right 40px
+
+.about-us__info
+  flex 1 1 auto
+
+.about-us__title
+  color #343434
+  display block
+  font-size 25px
+  font-weight 500
+  letter-spacing .49px
+  line-height 1
+  margin-bottom 13px
+  text-transform uppercase
+
+.about-us__desc
+  .std
+    color #959595
+    font-size 14px
+    font-weight 400
+    letter-spacing .49px
+    line-height 21px
+    text-align justify
+
+    p
+      margin 0
+
+.icon--logo
+  &:before
+    content svg-inline(logo)
+
+
+// Footer
+.footer-container
+  background none
+  border-bottom 3px solid $cor01
+  border-top 3px solid $cor01
+  margin 75px 0 0 0
+  padding 0
+
+.footer
+  color #959595
+
+.wrapper
+  .menus-lane
+  .contact-lane
+  .copyright-lane
+    margin 0
+
+.menus-lane__center
+  border-bottom 1px solid #e1e1e1
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  padding 40px 0 30px
+
+.footer-menu
+  flex 0 0 auto
+
+.footer-menu__title
+  color black
+  display block
+  font-size 14px
+  font-weight 500
+  letter-spacing .3px
+  margin-bottom 17px
+  text-transform uppercase
+
+.mymenu
+
+  .li--0:not(:last-child)
+    margin-bottom 8px
+
+  .a--0
+    color #959595
+    font-size 13px
+    font-weight 500
+    letter-spacing .3px
+    text-transform none
+    transition all 150ms ease-in-out
+
+    &:hover
+      color $cor01
+
+.pays__list
+  display flex
+  flex-wrap wrap
+  max-width 185px
+  margin -5px
+  width 100%
+
+.pays__item
+  margin 5px !important
+  padding 0
+
+.pays__svg
+  border 1px solid #ededed
+  border-radius 2px
+  height 43px
+  padding 10px
+  transition all 150ms ease-in-out
+  width 60px !important
+
+  &:hover
+    border-color $cor01
+
+.likebox
+  min-width 264px
+
+.contact-lane__center
+  border-bottom 1px solid #e1e1e1
+  padding 40px 0
+
+.contact-list
+  align-items center
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+
+.contact-list__item
+  flex 0 0 auto
+
+.contact-list__title
+  color black
+  display block
+  font-size 14px
+  font-weight 500
+  letter-spacing .1px
+  margin-bottom 4px
+
+.contact-list__desc
+  display block
+
+  p
+  a
+    color #959595
+    font-size 15px
+    font-weight 500
+    letter-spacing .1px
+    line-height 1
+    transition all 150ms ease-in-out
+
+    &[href*="mailto"]
+      font-size 14px
+
+    &[target='_blank']:after
+      display none
+
+  a:hover
+    color $cor01
+
+.contact-list__item:before
+  margin-right 12px
+
+.icon--phone2
+  &:before
+    content svg-inline(phone2)
+
+.icon--whats2
+  &:before
+    content svg-inline(whats2)
+
+.icon--email
+  &:before
+    content svg-inline(email)
+
+.icon--support
+  &:before
+    content svg-inline(support)
+
+
+.copyright-lane
+  display flex
+  justify-content center
+
+.copyright-lane__center
+  align-items center
+  display flex
+  justify-content space-between
+  padding 32px 0
+
+  > *
+    flex 0 0 auto
+
+.icon--logo2
+  &:before
+    content svg-inline(logo2)
+
+.copyright
+  .std
+  .std p
+    color #959595
+    font-size 12px
+    font-weight 500
+    line-height 20px
+    margin 0
+
+.social__title
+  color black
+  display block
+  font-size 14px
+  font-weight 500
+  letter-spacing .1px
+
+.footer .socials
+  margin-top 7px
+  padding 0
+
+.socials__list
+  margin 0
+  padding 0
+
+.socials__item
+  margin-right 5px !important
+  padding 0
+
+  &:last-child
+    margin-right 0
+
+.socials__link
+  border 1px solid $cor01
+  border-radius 50%
+  display block
+  padding 0
+  transition all 150ms ease-in-out
+
+  &:hover
+    transform scale(1.1)
+
+.socials__svg
+  align-items center
+  display flex
+  height 30px
+  justify-content center
+  padding 6px
+  width 30px
+
+.safe
+  min-width 240px
+

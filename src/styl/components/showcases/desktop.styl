@@ -83,6 +83,9 @@
     .showcase__button
       margin-top 6px
 
+    .old-price
+      margin-top -5px !important
+
 .product__main
   box-shadow inset 0 0 0 1px #e1e1e1
   border-top 0 none
@@ -160,6 +163,9 @@
 .price-box
   margin 0
 
+.products__list .price-box > span:not(:last-child)
+  margin 0
+
 .product__prices
   .regular-price
   .special-price
@@ -185,3 +191,16 @@
     .value
       span
         color black
+
+.old-price
+  margin 0 0 4px !important
+  line-height 11px !important
+  padding-left 1px
+  transition all 150ms ease-in-out
+
+  .price
+    color #7d7b7b
+    font-size 11px
+    font-weight 500
+    line-height 1
+    text-decoration line-through

@@ -1,9 +1,12 @@
 .wrapper-container
   padding-top 253px
 
+  body:not(.cms-home) &
+    padding-top 288px
+
 .header-container
   background-color white
-  box-shadow 0 3px 4px 0 rgba(34, 31, 31, .2)
+  box-shadow none
   left 0
   top 0
   position fixed
@@ -210,12 +213,14 @@
   border 0 none
   border-radius 0
   box-shadow none
+  line-height 1
   padding 0
   text-align center
   width 43px
 
   &:hover
     background-color transparent
+    border 0 none
 
   span
     display inline-block
@@ -497,11 +502,22 @@
 
 .ruler-list__desc
   .std
+  .std p
+  .std a
     color #9e9e9e
     font-size 11px
     font-weight 500
     letter-spacing .19px
     line-height 14px
+    transition all 150ms ease-in-out
+
+  .std a
+
+    &:hover
+      color $cor01
+
+    &:after
+      display none
 
 
 .icon--shipping
@@ -523,6 +539,7 @@
 
 .menu-lane
   background-color $cor01
+  box-shadow 0 3px 4px 0 rgba(34, 31, 31, .2)
   position relative
   z-index 200
 

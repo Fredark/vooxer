@@ -1,0 +1,93 @@
+<div class="menus-lane">
+    <div class="center menus-lane__center">
+        <div class="footer-menu">
+            <h4 class="footer-menu__title">
+                Institucional
+            </h4>
+            {{widget type="menubuilder/output" id="8" template="menubuilder/output.phtml"}}
+        </div>
+        <div class="footer-menu">
+            <h4 class="footer-menu__title">
+                Ajuda e Suporte
+            </h4>
+            {{widget type="menubuilder/output" id="9" template="menubuilder/output.phtml"}}
+        </div>
+        <div class="footer-menu">
+            <h4 class="footer-menu__title">
+                Minha Conta
+            </h4>
+            {{widget type="menubuilder/output" id="10" template="menubuilder/output.phtml"}}
+        </div>
+        <div class="footer-menu">
+            <h4 class="footer-menu__title">
+                Formas de Pagamento
+            </h4>
+            {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="payment" pagtos="all"}}
+        </div>
+        <div class="likebox">
+            {{widget type="socialconnect/facebook_widget" template="socialconnect/facebook/widget.phtml" code="likebox" url="https://www.facebook.com/BgEnxovais" width="264" height="130" show_facepile="true" show_posts="false"}}
+        </div>
+    </div>
+</div>
+<div class="contact-lane">
+    <div class="center contact-lane__center">
+        <ul class="contact-list">
+            <li class="contact-list__item icon--phone2">
+                <div class="contact-list__info">
+                    <span class="contact-list__title">
+                        Fale conosco:
+                    </span>
+                    <span class="contact-list__desc">
+                        {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="39"}}
+                    </span>
+                </div>
+            </li>
+            <li class="contact-list__item icon--whats2">
+                <div class="contact-list__info">
+                    <span class="contact-list__title">
+                        Fale pelo whats:
+                    </span>
+                    <span class="contact-list__desc">
+                        {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="43"}}
+                    </span>
+                </div>
+            </li>
+            <li class="contact-list__item icon--email">
+                <div class="contact-list__info">
+                    <span class="contact-list__title">
+                        Fale pelo e-mail:
+                    </span>
+                    <span class="contact-list__desc">
+                        {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="40"}}
+                    </span>
+                </div>
+            </li>
+            <li class="contact-list__item icon--support">
+                <div class="contact-list__info">
+                    <span class="contact-list__title">
+                        Nosso atendimento:
+                    </span>
+                    <span class="contact-list__desc">
+                        {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="41"}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="copyright-lane">
+    <div class="center copyright-lane__center icon--logo2">
+        <div class="copyright">
+            {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="42"}}
+        </div>
+        <div class="social">
+            <h3 class="social__title">
+                Siga-nos!
+            </h3>
+            {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="social" redes="5,1"}}
+        </div>
+        <div class="safe">
+            {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="seals" seals="all"}}
+        </div>
+    </div>
+</div>

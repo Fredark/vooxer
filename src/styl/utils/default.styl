@@ -23,6 +23,65 @@ html
   &:before
     flex 0 0 auto
 
+.btn
+button
+input[type=button]
+input[type=reset]
+input[type=submit]
+  background-color $cor01
+  border-radius 0
+  border 1px solid transparent
+  box-shadow none
+  color white
+  font-size 15px
+  font-weight 500
+  letter-spacing .99px
+  line-height 18px
+  padding 14px 15px
+  text-transform uppercase
+  transition all 150ms ease-in-out
+
+  &:hover
+    background-color white
+    border 1px solid $cor01
+    color $cor01
+
+
+.wrapper .breadcrumb
+  margin-bottom 30px
+
+.breadcrumb__list
+  @extend .center
+  display flex
+
+.breadcrumb__home
+
+  .breadcrumb__link
+    color black
+
+    &:before
+      display none
+
+  & + .breadcrumb__sep
+    color black
+
+.breadcrumb__link
+.breadcrumb__last
+.breadcrumb__sep
+  color #959595
+  font-size 13px
+  font-weight 500
+  letter-spacing .5px
+  line-height 1
+  transition all 150ms ease-in-out
+
+.breadcrumb__sep
+  margin 0 4px
+
+.breadcrumb__link
+  &:hover
+    color black
+
 ::-webkit-scrollbar
   height 5px
   width 5px
