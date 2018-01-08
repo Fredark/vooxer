@@ -92,6 +92,7 @@
   max-width 240px
   overflow hidden
   padding 10px 12px 0
+  width 100%
 
 .product__name
   color #959595
@@ -204,3 +205,37 @@
     font-weight 500
     line-height 1
     text-decoration line-through
+
+.product__header
+  p
+    background-color $cor01
+    border-radius 50%
+    color white
+    font-size 12px
+    font-weight 500
+    display block
+    height 40px
+    line-height 40px
+    text-align center
+    width 40px
+
+.carrossel .products__item
+  margin-bottom 0
+  padding 28px 15px
+
+.owl-carousel
+  .owl-wrapper-outer
+    margin 0 -10px
+    width calc(100% + 20px)
+
+  .owl-wrapper
+    padding-left 10px
+
+
+.owl-prev
+.owl-next
+  top 50%
+  transform translateY(-50%)
+
+.owl-pagination
+  display none

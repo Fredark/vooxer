@@ -1,0 +1,27 @@
+<div class="prod__img">
+    @fotos
+</div>
+<div class="prod__shop">
+    <div class="prod__infos">
+        <div class="prod__name">
+            <h1>@nome</h1>
+        </div>
+        <div class="prod__short-desc std">@descricao(curta)<span class="see-more">Ver descrição completa</span></div>
+    </div>
+    @if(is_disponivel)
+    @avaliacoes
+    @preco
+    @preco(parcelado)
+    @temporizador
+    @bt(comprar)
+    @simulador-frete
+    @compartilhar
+    @else(is_disponivel)
+    <div class="prod__esgotado">
+        <div class="title title--sm">Produto Esgotado</div>
+        @alertas
+    </div>
+    @endif(is_disponivel)
+    @variacoes
+    @bt(sobconsulta "Sob Consulta")
+</div>
