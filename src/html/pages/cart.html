@@ -10,11 +10,10 @@
     <div class="cart__right">
         @simulador-frete
         @totais
+        <div class="cart__links">
+            @bt(continuar-comprando "Continuar Comprando")
+            @bt(finalizar "Finalizar Compra")
+        </div>
     </div>
 </div>
 
-<div class="cart__links">
-    @bt(continuar-comprando "Comprar mais")
-    @bt(finalizar "Finalizar")
-    @bt(multi-envios "Finalizar com Múltiplos Endereços")
-</div>

@@ -76,6 +76,7 @@ $j(document)
                 $j(this).append('<div class="jointsales__values"></div>');
             });
 
+
             $j.each($j('.jointsales__values'), function() {
                 $row = $j(this).parents('.jointsales__row');
 
