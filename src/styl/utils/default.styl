@@ -1,6 +1,6 @@
 body,
 html
-  font 400 100%/1 'Montserrat', sans-serif
+  font 400 100%/1 $font01
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -100,6 +100,7 @@ textarea
 body:not(.cms-home)
   .title
   .prod__title
+  .page-title h1
     border-bottom 1px dashed #424242
     color black
     font-size 17px
@@ -113,6 +114,13 @@ body:not(.cms-home)
 .fieldset .legend
 .form-list > li:not(:last-child):not(.fields)
   margin-bottom 10px
+
+.qty-wrapper .msg
+  background-color $cor01
+  color white
+
+  &:before
+    border-top-color $cor01
 
 ::-webkit-scrollbar
   height 5px

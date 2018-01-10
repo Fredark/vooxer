@@ -16,6 +16,13 @@
     @bt(comprar)
     @simulador-frete
     @compartilhar
+    <div class="price-floater">
+        <span class="price-floater__close"></span>
+        @preco
+        @preco(parcelado)
+        @temporizador
+        @bt(comprar)
+    </div>
     @else(is_disponivel)
     <div class="prod__esgotado">
         <div class="title title--sm">Produto Esgotado</div>

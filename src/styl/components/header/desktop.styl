@@ -366,6 +366,9 @@
   &:last-child
     margin-bottom 0
 
+  .truncated
+    display none
+
 .mycart__thumb
   align-items center
   display flex
@@ -380,6 +383,8 @@
     width auto
 
 .mycart__remove
+  background-color transparent
+  border 0 none
   border-radius 0
   left auto
   line-height 0
@@ -389,6 +394,7 @@
 
   &:hover
     background-color transparent
+    border 0 none
 
     &:before
       content svg-inline(close-hover)

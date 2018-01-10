@@ -4,6 +4,10 @@
     <h2 class="prod__title">Descrição do produto</h2>
     <div class="product__desc">
         @descricao
+        <div class="product__details">
+            @atributos
+        </div>
+
     </div>
 </div>
 @avaliacoes(form)
@@ -13,3 +17,39 @@
     <h4 class="showcase__sub">Dê uma espiadinha, você vai gostar!</h4>
     <div class="carrossel">@relacionados</div>
 </div>
+
+<script type="text/javascript">
+    function MathQty(type,min,max,step){
+        console.log("new?!");
+        var
+            input = jQuery('.qty-wrapper input.qty'),
+            current_val = parseInt(input.first().val());
+
+        if(type == 'less'){
+            // Menos
+            if(current_val - step < min){
+                msgMinMax('Quantidade mínima: <strong>'+min+'</strong>', input);
+                input.val(min);
+            }else{
+                input.val(current_val - step);
+            }
+        }else if(type == 'plus'){
+            // Mais
+            if(current_val + step > max){
+                msgMinMax('Quantidade máxima: <strong>'+max+'</strong>', input);
+                input.val(max);
+            }else{
+                input.val(current_val + step);
+            }
+        }else{
+            roundTyping(input.attr('id'));
+        }
+    }
+
+    function msgMinMax(msg, input){
+        input.parent().find('.msg').html(msg).addClass('on');
+        setTimeout(function(){
+            input.parent().find('.msg').removeClass('on');
+        },5000);
+    }
+</script>

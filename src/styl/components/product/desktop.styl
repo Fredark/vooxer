@@ -1,13 +1,6 @@
 .prod__img
   flex 1 1 auto
 
-.prod__shop
-  display block
-  flex 0 0 460px
-
-  .product-rate
-    margin-bottom 20px
-
 .product-image-gallery
   box-shadow none
   margin 0
@@ -137,8 +130,8 @@
   padding-top 90px
 
 .reviews__ratings
-  flex 0 0 415px
-  margin 0 70px
+  flex 0 0 425px
+  margin 0 65px 0 45px
 
 .reviews__content
 
@@ -158,6 +151,399 @@
         display block
         text-transform uppercase
 
+.prod__shop
+  display block
+  flex 0 0 460px
+
+  .product-rate
+    margin-bottom 20px
+
+  .old-price
+  .special-price
+  .regular-price
+    .label
+      display none
+
+  .old-price
+    margin-bottom 16px !important
+
+    .price span
+      color #868686
+      font-size 13px
+      font-weight 500
+      letter-spacing .5px
+      line-height 1
+      text-decoration line-through
+
+  .special-price
+  .regular-price
+    margin-bottom 5px
+
+    .price span
+      color black
+      font-size 30px
+      font-weight 800
+      line-height 1
+
+  .price-box-parcelado
+    margin-bottom 35px
+
+    .preco-parcelado
+
+      & span
+        color #868686
+        font-size 15px
+        font-weight 500
+        letter-spacing .5px
+
+      .num
+      .value
+        span
+          color black
+          font-weight 500
+
+  .add-to-cart-buttons
+    align-items stretch
+    display flex
+
+    &[style*="block"]
+      display flex !important
+
+  .qty-wrapper
+    align-items stretch
+    display flex
+    position static
+    transform none
+    margin 0 33px 0 0
+    flex 0 0 63px
+
+    .input-box
+      width 100%
+
+    input
+      background-color transparent
+      border 1px solid #e1e1e1 !important
+      border-radius 0 !important
+      color #868686
+      font-size 18px
+      font-weight 500
+      height 100%
+      transition all 150ms ease-in-out
+      width 100%
+
+      &:hover
+      &:focus
+        border-color $cor01 !important
+
+      &:focus
+        color $cor01
+
+    .bt-box
+
+      box-shadow none
+
+    .bt
+      background-color $cor01
+      border 1px solid transparent
+      color white
+      font-size 12px
+      font-weight 400
+      height 24px
+      line-height 24px
+      transition all 150ms ease-in-out
+      width 21px
+
+      &:hover
+        border-color $cor01
+        background-color white
+        color $cor01
+
+  .add-to-cart
+    margin-bottom 25px
+
+  .add-to-cart-btn
+    font-size 18px
+    font-weight 400
+    height 57px
+    letter-spacing 1.2px
+
+.frete
+  margin-bottom 24px !important
+
+.frete__title
+  display none
+
+.frete__content
+  display block
+
+.frete__form
+  display block
+  position relative
+
+  label
+    align-items center
+    border 0 none
+    box-shadow none
+    background-color transparent
+    display inline-flex
+    font-size 0
+    height 55px
+    line-height 0
+    padding 0 0 0 12px
+    position absolute
+    left 0
+    top 0
+
+    &:before
+      content svg-inline(shipping-product)
+      flex 0 0 auto
+      margin-right 12px
+
+    &:after
+      color black
+      content 'Frete'
+      font-size 13px
+      font-weight 500
+      letter-spacing .8px
+      line-height 1
+      text-transform uppercase
+
+  .frete__actions
+    bottom 7px
+    position absolute
+    right 0
+    top 7px
+
+    .btn
+      background-color transparent
+      border 0 none
+      border-left 1px solid #e1e1e1
+      height 100%
+      line-height 0
+      padding 13px 15px
+      transition all 150ms ease-in-out
+
+      &:before
+        color black
+        content 'Calcular'
+        font-size 13px
+        font-weight 500
+        letter-spacing .8px
+        line-height 15px
+        text-transform uppercase
+        transition all 150ms ease-in-out
+
+      &:hover
+        border 0 none
+        border-left 1px solid #e1e1e1
+
+        &:before
+          color $cor01
+
+      span
+        display none
+
+  .input-text
+    border 1px solid #e1e1e1 !important
+    color black
+    font-size 15px
+    font-weight 500
+    letter-spacing .8px
+    line-height 1
+    height 55px
+    padding 0 110px 0 130px
+    transition all 150ms ease-in-out
+    width 100%
+
+    &:hover
+    &:focus
+      border-color $cor01 !important
+
+.frete__naosei
+  line-height 1
+  margin-top 10px
+  text-align right
+
+.frete
+  .frete__results
+    margin-top 10px
+    padding 5px 15px 15px 15px
+
+    .title
+      font-size 13px
+      padding 10px 0
+
+    dt
+      font-size 11px
+      letter-spacing .5px
+      margin-bottom 10px
+
+    dl
+      margin-bottom 10px
+
+    dd
+      font-size 11px
+      letter-spacing .5px
+
+    .demo
+      color #999
+      display inline-block
+      font-size 9px
+      line-height 13px
+
+
+.frete__close
+  background-color transparent
+  border 0 none
+  color $cor01
+  padding 0
+  top 12px
+  right 13px
+
+  &:before
+    transition all 150ms ease-in-out
+
+  &:hover
+    border 0 none
+    &:before
+      color black
+
+.sharing-links
+  .list
+    border-bottom 1px solid #e1e1e1
+    display flex
+    margin 0
+    justify-content center
+    padding-bottom 20px
+
+    &:before
+      color #868686
+      content 'Compartilhe!'
+      font-size 12px
+      font-weight 400
+      letter-spacing .18px
+      margin 0 10px 0 0
+      opacity 1
+      text-transform uppercase
+
+    li
+      flex 0 0 auto
+      margin 0 5px
+
+    a
+      background-color transparent
+      border-radius 0
+      height auto
+      width auto
+
+    svg
+      fill $cor01
+
+  .gp-share
+  .tb-share
+  .lk-share
+    display none
+
+.price-floater
+  background-color white
+  border 1px solid #ebebeb
+  border-right 0 none
+  box-shadow 4px 4px 5px 0 rgba(0, 0, 0, .18)
+  opacity 0
+  padding 16px
+  position fixed
+  right 0
+  top 50%
+  transform translateY(-50%)
+  transition all 150ms ease-in-out
+  visibility hidden
+  width 251px
+  z-index -1
+
+  .old-price
+    margin-bottom 10px !important
+
+  .regular-price
+  .special-price
+    .price span
+      font-size 27px
+      font-weight 700
+
+  .price-box-parcelado
+    margin-bottom 15px
+
+  .qty-wrapper
+    margin-right 23px
+
+  .add-to-cart
+    margin 0
+
+  .add-to-cart-btn
+    font-size 16px
+
+    span
+      display none
+
+    &:before
+      content 'Comprar'
+      display block
+      line-height 15px
+
+.price-floater--on
+  opacity 1
+  visibility visible
+  z-index 200
+
+.price-floater--closed
+  opacity 1
+  visibility visible
+  z-index 200
+  right -251px
+
+  .price-floater__close
+    &:hover
+      &:before
+        color $cor01
+        content: "\f053";
+        font-family: "biz_icons",sans-serif;
+
+    &:before
+      color white
+      content: "\f053";
+      font-family: "biz_icons",sans-serif;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      font-size 13px
+      line-height 1
+
+
+
+
+.price-floater__close
+  &:hover
+    &:before
+      background-color white
+      border-color $cor01
+      content svg-inline(close2-hover)
+
+  &:before
+    align-items center
+    background-color $cor01
+    border 1px solid transparent
+    content svg-inline(close2)
+    cursor pointer
+    display flex
+    height 30px
+    justify-content center
+    line-height 0
+    width 30px
+    left -30px
+    top -1px
+    position absolute
+    transition all 150ms ease-in-out
+
 .form-list
   label
   label em
@@ -166,6 +552,214 @@
     font-weight 500
     letter-spacing .4px
     padding 0
+
+.jointsales__row
+  align-items flex-start
+  padding 0
+
+.jointsales__items
+  flex 0 0 auto
+  max-width none
+  padding 0
+  width 100%
+
+
+.jointsales__current
+.jointsales__list
+  flex 1 1 350px
+  margin-right 110px
+  padding 0
+
+  .thumb
+    flex 0 0 34%
+    margin 0 20px 0 0
+
+  .regular-price
+  .special-price
+    .label
+      display none
+
+    .price
+      color black
+      font-size 16px
+      font-weight 700
+
+.jointsales__currentin
+  box-shadow none
+  padding 0
+
+.jointsales
+  .jointsales__items
+    .title
+      border-bottom 1px solid #dadada
+      color #959595
+      font-size 13px
+      font-weight 500
+      letter-spacing .49px
+      line-height 18px
+      height 58px
+      padding 0 0 4px
+      overflow hidden
+      text-transform uppercase
+
+  .more
+    font-size 0
+    height auto
+    right -70px
+    line-height 0
+    transform none
+    top 50px
+    width auto
+
+    &:before
+      display none
+
+    &:after
+      color black
+      content '+'
+      display block
+      font-size 40px
+      font-weight 600
+      line-height 23px
+
+.jointsales__item
+  align-items center
+  max-width none
+  display flex
+  padding 0
+
+.jointsales__values
+  position relative
+
+  &:before
+    color black
+    content '='
+    display block
+    font-size 40px
+    font-weight 600
+    line-height 23px
+    position absolute
+    top 50px
+    left -68px
+
+
+.jointsales__totals
+  color #868686
+  font-size 13px
+  font-weight 400
+  letter-spacing .2px
+  line-height 17px
+  margin 0
+
+  .economize
+    background $cor01
+    border-radius 0
+    margin-top 10px
+    text-align center
+    width 100%
+
+.jointsales__payments
+  margin 0
+  line-height 15px
+
+  .parcelamento
+    .s-juros
+    .num
+    .value
+      background-color transparent
+      color black
+      font-size 13px
+      font-style normal
+      font-weight 700
+      padding 0
+
+    .s-juros
+      color #868686
+      font-weight 400
+
+.jointsales__action
+  margin-top 1px
+
+  button
+    font-size 13px
+    letter-spacing .3px
+    line-height 13px
+    padding 11px 0
+    height 37px
+    width 100%
+
+
+.product__description
+  .std
+    p
+    span
+      color #929292
+      font-family $font01 !important
+      font-size 14px
+      font-weight 500
+      letter-spacing .24px
+      line-height 27px
+
+    p
+      margin-bottom 25px
+
+    ul
+      margin-bottom 25px
+
+    li
+      line-height 1
+
+      span
+      p
+        line-height 1
+        margin 0
+
+.product__details
+  padding-top 10px
+
+  h2
+    color $cor01
+    display block
+    font-size 14px
+    font-weight 500
+    letter-spacing .24px
+    margin-bottom 12px
+    text-transform uppercase
+
+  table
+    border 0 none
+
+    tr
+      background-color white
+
+      &:nth-child(odd)
+        background #f7f7f7
+
+    td
+    th
+    th:first-child
+    td:first-child
+    th:last-child
+    td:last-child
+      border 0 none
+
+    td
+    th
+      &
+      &:first-child
+        color #929292
+        font-size 14px
+        font-weight 500
+        letter-spacing .24px
+        line-height 17px
+        padding 9px 10px
+
+      @media (min-width 1200px)
+        &:first-child
+          white-space nowrap
+
+
+
 
 .review-summary
   justify-content flex-start
@@ -203,3 +797,76 @@
   .form-list
     .wide:first-child
       margin-bottom 0
+
+  .reviews__list
+    .title
+      border 0 none
+      color black
+      font-size 14px
+      font-weight 600
+      letter-spacing .2px
+      margin 0 10px 0 0
+      padding 0
+      text-transform uppercase
+
+  .customer-message
+    color #4b4b4b
+    font-size 14px
+    font-weight 600
+    letter-spacing .2px
+    line-height 16px
+    margin-bottom 5px
+    text-transform none
+
+.reviews__resume
+  .product-rate
+    .circle-percent
+      .on
+        stroke-width 2px
+        stroke $cor01
+
+.reviews__list
+  .name
+  .label
+  .date
+    color #929292
+    font-size 13px
+    font-weight 600
+    letter-spacing .2px
+
+  .label
+    text-transform capitalize
+
+  .details
+    margin-top 23px
+
+
+  li
+    padding-bottom 25px
+    position relative
+
+    &:not(:first-child)
+      border 0 none
+      padding-top 25px
+
+      &:before
+        border-top 1px solid #e5e5e5
+        content ''
+        display block
+        max-width 360px
+        position absolute
+        left 1rem
+        top 0
+        width 100%
+
+.product-rate .rating-box
+  height auto
+
+#continuar-finalizar
+  .actions
+    a
+      @extend .btn
+      background-color $cor02
+
+    a.btn-checkout
+      @extend .prod__shop .add-to-cart-btn

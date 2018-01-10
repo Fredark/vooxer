@@ -1,0 +1,20 @@
+<div class="page-title">
+    <h1><span>Sacola de Compras</span></h1>
+</div>
+
+@tabela-produtos
+@aviso-frete-gratis
+
+<div class="cart__boxes">
+    @cupom
+    <div class="cart__right">
+        @simulador-frete
+        @totais
+    </div>
+</div>
+
+<div class="cart__links">
+    @bt(continuar-comprando "Comprar mais")
+    @bt(finalizar "Finalizar")
+    @bt(multi-envios "Finalizar com Múltiplos Endereços")
+</div>
