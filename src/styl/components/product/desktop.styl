@@ -76,6 +76,7 @@
     color black
     cursor pointer
     font-weight 600
+    padding-left 3px
     text-transform uppercase
     transition all 150ms ease-in-out
 
@@ -442,6 +443,7 @@
   .gp-share
   .tb-share
   .lk-share
+  .email-to-friend
     display none
 
 .price-floater
@@ -573,6 +575,10 @@
   .thumb
     flex 0 0 34%
     margin 0 20px 0 0
+
+  .old-price
+    .label
+      display none
 
   .regular-price
   .special-price
@@ -866,7 +872,8 @@
   .actions
     a
       @extend .btn
-      background-color $cor02
+      background-color black
 
     a.btn-checkout
       @extend .prod__shop .add-to-cart-btn
+      background-color $cor01

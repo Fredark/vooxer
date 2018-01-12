@@ -1,0 +1,349 @@
+@media (max-width 1200px)
+  .header-lane__center
+  .ruler-lane
+  .menu-lane
+    display none
+
+  .header-lane__mobile
+    display block
+
+  .menu--mobile
+    margin-right 15px
+
+  .header-lane__top
+    height 40px
+
+  .logo-svg
+    flex 0 0 100%
+    margin 0 0 10px
+    overflow hidden
+    height 64px
+    transition all 150ms ease-in-out
+
+    svg
+      height 61px
+
+  .search--mobile
+    flex 1 1 auto
+
+  .icon--menu2
+    &:before
+      content svg-inline(menu3)
+
+  .header-lane__bottom
+    justify-content space-between
+    flex-wrap wrap
+    padding 10px 0
+
+  .header
+    .search
+      position static
+
+  .cart__info
+    display none
+
+  .icon--user:before
+  .icon--whatsapp:before
+    transform scale(.8)
+    margin-right 5px
+
+  .welcome-message
+    font-size 11px
+
+  .header
+    .mycart
+      margin 0
+
+    .search__form
+      .input-box
+        display flex
+
+    .mycart__header
+      margin-left 15px
+      padding 0
+
+      a
+        padding 0
+
+        &:before
+          margin 0
+
+        &:after
+          display none
+
+  .phones
+    .std
+      font-size 11px
+
+      a:after
+        display none
+
+
+  .search
+    .search__input
+      padding-left 15px
+      padding-right 0
+
+      &::placeholder
+        font-size 0
+
+  .wrapper-container
+    padding-top 175px
+
+    body:not(.cms-home) &
+      padding-top 190px
+
+  .header__line
+    flex 0 0 100%
+    display flex
+    align-items center
+
+    .logo
+      display none
+      margin-right 15px
+
+  body.moving
+    .header-lane__top
+      border-bottom 1px dashed #363636
+      height 40px
+
+    .logo-svg
+      height 0
+      margin 0
+
+    .search__label
+      display none
+
+    .header__line
+      .logo
+        display block
+
+  body.moving--down
+
+    .header-lane__top
+      border 0 none
+      height 0
+
+    .logo-svg
+      height 0
+      margin 0
+
+  .menu--mobile__env
+    background-color white
+    height 100%
+    position fixed
+    left -100%
+    top 0
+    width 100%
+    z-index 500
+    transition all 600ms  cubic-bezier(.23,1,.32,1)
+
+    .categories--justify
+      .ul--0
+        display block
+
+  .menu__title
+  .btn--back
+    background-color $cor01
+    color white
+    display block
+    font-size 15px
+    font-weight 500
+    letter-spacing .99px
+    height 50px
+    line-height 50px
+    text-align center
+    text-transform uppercase
+
+
+  .btn--back
+    border 0 none
+    margin-bottom 15px
+    padding 0 15px
+    text-align left
+
+  .user--mobile
+    align-items center
+    display flex
+
+  .header .myaccount
+    .user--mobile__photo
+      border 1px solid $cor01
+      height 40px
+      margin-right 10px
+      width 40px
+
+      &:empty
+        &:before
+          content svg-inline(user)
+
+  .user--mobile__name
+    display block
+
+  .user--mobile__desc
+    display block
+
+  .header
+    .myaccount
+      margin-bottom 10px
+      padding 0 15px
+
+    .myaccount__header
+      padding 0
+      width auto
+
+  .user--mobile__desc
+  .user--mobile__name
+    display block
+    font-size 13px
+
+    strong
+      color $cor01
+
+  .user--mobile__name
+    margin-bottom 3px
+
+  .categories--justify
+    .li--0.removed
+      position relative !important
+      left auto !important
+      top auto !important
+
+    .categories__all.li--0
+      display none
+
+  .header-container
+    .categories
+    .categories:not(.categories--mini)
+      max-height calc(100% - 134px)
+      overflow auto
+      padding-bottom 10px
+
+    .ul--0
+      display block
+
+    .li--0
+      border 0 none
+      border-bottom 1px solid $cor01
+      display block
+      position relative
+
+      &.parent
+        &:after
+          color $cor01
+          content '\f054'
+          font-family: "biz_icons",sans-serif;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          font-size 13px
+          height 45px
+          line-height 45px
+          text-align center
+          transition all 150ms ease-in-out
+          position absolute
+          right 0
+          top 0
+          width 45px
+
+        .a--0
+          border-right 1px solid $cor01
+          width calc(100% - 45px)
+
+      &.li--0open
+        .a--0
+          color $cor01
+
+        &:after
+          transform rotate(90deg)
+
+      .box--1
+        display none
+        position static
+        opacity 1
+        visibility visible
+        transform none
+        transition none
+
+        .ul--1
+          display block
+          margin 0
+          padding 0
+          max-width none
+          max-height none
+          overflow visible
+
+
+        .li--1
+          padding-left 8px
+          width 100%
+
+          &:first-child
+            border-top 1px solid $cor01
+
+          &:last-child
+            border-bottom 0 none
+
+        .a--1
+          padding-left 7px
+
+          span
+            font-size 13px
+            padding 12px 0
+
+    .a--0
+      align-items center
+      background-color transparent
+      display flex
+      flex-flow row nowrap
+      height 45px
+      justify-content flex-start
+      padding 0 10px
+
+      span
+        font-size 13px
+
+      &:before
+        margin 0 7px 0 0
+        width 30px
+
+      span
+        color #333
+
+  .categories__block
+    display none
+
+  .modal--left
+    left 0
+
+  .modal--right
+    right 0
+
+  body.modal--on
+    overflow hidden
+
+  .myaccount__register
+    border 0 none
+
+  .myaccount__forgot
+    top 55px
+    left 7.5px
+
+  .myaccount__register .std
+  .myaccount__content .title
+    font-size 23px
+    text-align center
+
+  .myaccount__content
+    input
+      height 48px
+
+  .mycart .mycart__content
+    display none !important
+
+  .mycart:hover:not(.mycart--empty) .mycart__header a
+    box-shadow none
+
+  .wrapper .breadcrumb
+    margin-bottom 15px

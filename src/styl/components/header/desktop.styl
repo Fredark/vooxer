@@ -25,10 +25,11 @@
     width 100%
     z-index -1
 
-  &.mask--on:after
-    opacity 1
-    visibility visible
-    z-index 200
+  @media (min-width 1201px)
+    &.mask--on:after
+      opacity 1
+      visibility visible
+      z-index 200
 
 
 .header
@@ -691,9 +692,10 @@
         margin-right 50px
         width 190px
 
-        &:nth-child(5n)
-        &:nth-child(5n):hover
-          border-color transparent
+        @media (min-width 1201px)
+          &:nth-child(5n)
+          &:nth-child(5n):hover
+            border-color transparent
 
         &:hover
           border-color $cor01

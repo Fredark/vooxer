@@ -18,9 +18,10 @@
     @compartilhar
     <div class="price-floater">
         <span class="price-floater__close"></span>
-        @preco
-        @preco(parcelado)
-        @temporizador
+        <div class="price-floater__prices">
+            @preco
+            @preco(parcelado)
+        </div>
         @bt(comprar)
     </div>
     @else(is_disponivel)
