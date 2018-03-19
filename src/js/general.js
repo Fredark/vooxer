@@ -41,17 +41,6 @@ $j(document)
             $btnBack          = $j('.btn--back');
 
 
-        if($myCart.length > 0) {
-
-            $myCart.on('mouseenter', function(){
-                $headerContainer.addClass('mask--on');
-            });
-
-            $myCart.on('mouseleave', function(){
-                $headerContainer.removeClass('mask--on');
-            });
-        }
-
         if($menuCenter.length > 0) {
 
             $menuCenter.on('mouseenter', function(){

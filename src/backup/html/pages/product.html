@@ -2,25 +2,44 @@
     @fotos
 </div>
 <div class="prod__shop">
+    <ul class="attributes-list">
+        @if(antioxidante)
+        <li class="attributes-list__item attributes-list__item--oxidante">
+            Anti Oxidante
+        </li>
+        @endif(antioxidante)
+        @if(semgluten)
+        <li class="attributes-list__item attributes-list__item--gluten">
+            Sem Glúten
+        </li>
+        @endif(semgluten)
+        @if(semacucar)
+        <li class="attributes-list__item attributes-list__item--acucar">
+            Sem Açucar
+        </li>
+        @endif(semacucar)
+    </ul>
     <div class="prod__infos">
+        <div class="prod__brand">
+            @marca
+        </div>
         <div class="prod__name">
             <h1>@nome</h1>
         </div>
-        <div class="prod__short-desc std">@descricao(curta)<span class="see-more">Ver descrição completa</span></div>
+        @avaliacoes
     </div>
+    <div class="prod__short-desc std">@descricao(curta)</div>
     @if(is_disponivel)
-    @avaliacoes
     @preco
+    @preco(avista)
     @preco(parcelado)
-    @temporizador
+    @variacoes
     @bt(comprar)
-    @simulador-frete
-    @compartilhar
     <div class="price-floater">
         <span class="price-floater__close"></span>
         <div class="price-floater__prices">
             @preco
-            @preco(parcelado)
+            @preco(avista)
         </div>
         @bt(comprar)
     </div>
@@ -30,6 +49,6 @@
         @alertas
     </div>
     @endif(is_disponivel)
-    @variacoes
     @bt(sobconsulta "Sob Consulta")
 </div>
+{{widget type="banner/widget_banner" template="banner/banner.phtml" banner="bannerregua"}}

@@ -1,6 +1,5 @@
 #banner__bannerhomefull
-  margin 0 auto 20px
-  max-width 1300px
+  margin 0 auto
 
 .main .col-main .banners-extras
   margin-bottom 38px
@@ -23,13 +22,6 @@
     position relative
     transition all 150ms ease-in-out
     width auto
-
-    @media (min-width 1201px)
-      &:hover
-        box-shadow 0 0 6px 0 rgba(0, 0, 0, .3)
-
-        img
-          transform scale(1.05)
 
     &:before
       background-color white
@@ -125,7 +117,100 @@
       &:before
         right 0
 
-
-
 .banner--nojs .banner__wrapper
   column-count auto
+
+.cms-home .header-container + .banner
+  margin 0
+
+#banner__bannerregua
+  align-items center
+  background-color white
+  display flex
+  height 140px
+  margin 0
+
+  .banner__wrapper
+    @extend .center
+    display flex
+    justify-content space-between
+
+    > *
+      flex 0 0 auto
+      width auto
+
+#banner__post
+  background-color transparent
+  height auto
+  margin-bottom 45px
+
+  .banner__wrapper
+    display flex
+    justify-content space-between
+
+    > *
+      flex 0 0 auto
+      width auto
+
+
+#banner__extra
+  margin-bottom 30px
+
+  .banner__wrapper
+    align-items center
+    display flex
+    flex-flow column wrap
+    height 462px
+    justify-content space-between
+
+    > *
+      flex 0 0 auto
+      width auto
+
+#menuvitrine
+  margin-bottom 40px
+
+  .ul--0
+    display flex
+    background-color white
+    border-radius 5px
+    padding 25px 0
+    justify-content center
+
+  .li--0
+    border-left 1px solid #f3f3f3
+    display block
+    flex 1 1 100px
+    margin 0
+
+    &:first-child
+      border-left 0 none
+
+  .a--0
+    color $cor02
+    display flex
+    font-size 14px
+    font-weight 600
+    flex-flow column wrap
+    justify-content flex-end
+    height 90px
+    text-align center
+    text-transform uppercase
+    transition all 150ms ease-in-out
+
+    &:hover
+      color $cor01
+
+.products__list .price-box > span:not(:last-child)
+  margin 0
+
+#banner__bannercategory
+  margin 0
+
+body.catalog-category-view
+  .header-container + .banner
+    img
+      max-width none
+      left 50%
+      position relative
+      transform translateX(-50%)

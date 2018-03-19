@@ -1,7 +1,6 @@
 <h2 class='product__header'>
-    @selos
     <a href='@url' itemprop='url' title='Mais detalhes' class='product-link'>
-        <span class='product__image product-image'>@foto(240x240)</span>
+        <span class='product__image product-image'>@foto(190x190)</span>
     </a>
 </h2>
 <div class='product__main'>
@@ -11,13 +10,10 @@
             @if(is_disponivel)
                 @preco
                 @preco(parcelado)
+                @preco(avista)
+	              @bt(comprar "Comprar")
             @else(is_disponivel)
                 <div class='product__out'>Produto Esgotado</div>
-            @endif(is_disponivel)
-        </div>
-        <div class="showcase__buy">
-            @if(is_disponivel)
-                @bt(comprar "Comprar Agora")
             @endif(is_disponivel)
         </div>
     </div>

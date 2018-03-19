@@ -3,6 +3,9 @@
 .wrapper section.newsletter
   margin-bottom 75px
 
+.wrapper .newsletter-lane
+  margin-bottom -40px
+
 .newsletter__center
   align-items stretch
   display flex
@@ -24,9 +27,11 @@
     border-color $cor01
 
 .newsletter__form
+  display flex
+  flex-flow row nowrap
   flex 1 1 auto
-  margin 0 10px
-  max-width 324px
+  margin 0
+
 
   > *
     padding 0
@@ -51,6 +56,15 @@
     &:hover
       border-color $cor01 !important
       color #333
+
+.newsletter__text
+  color white
+  font-size 14px
+  font-weight 900
+  flex 0 0 auto
+  margin 0 15px 0 0
+  padding-top 3px
+  text-transform uppercase
 
 .newsletter__name
   margin-bottom 10px
@@ -145,14 +159,41 @@
 
 // Footer
 .footer-container
-  background none
+  background #f3f3f3
   border-bottom 3px solid $cor01
-  border-top 3px solid $cor01
-  margin 75px 0 0 0
+  margin 0
   padding 0
 
-.footer
-  color #959595
+.footer-menu
+  flex 1 1 250px
+  margin-bottom 35px
+  padding 0
+
+  &:nth-child(5)
+    flex 1 1 523px
+
+  &:nth-child(6)
+    flex 1 1 250px
+
+  &:nth-child(4)
+  &:nth-child(7)
+    flex 1 1 150px
+
+.footer-menu .std
+.footer-menu__email
+  color #494949
+  font-size 14px
+  font-weight 400
+  line-height 18px
+  text-transform none
+
+.footer-menu__phone
+.footer-menu__support
+  display block
+  margin-bottom 20px
+
+.menus-lane
+  border-top 1px solid #dfdfdf
 
 .wrapper
   .menus-lane
@@ -161,22 +202,17 @@
     margin 0
 
 .menus-lane__center
-  border-bottom 1px solid #e1e1e1
   display flex
   flex-wrap wrap
   justify-content space-between
-  padding 40px 0 30px
-
-.footer-menu
-  flex 0 0 auto
+  padding 80px 0 10px
 
 .footer-menu__title
-  color black
+  color $cor01
   display block
   font-size 14px
-  font-weight 500
-  letter-spacing .3px
-  margin-bottom 17px
+  font-weight 900
+  margin-bottom 25px
   text-transform uppercase
 
 .mymenu
@@ -185,20 +221,25 @@
     margin-bottom 8px
 
   .a--0
-    color #959595
-    font-size 13px
-    font-weight 500
-    letter-spacing .3px
+    color #494949
+    font-size 14px
+    font-weight 400
     text-transform none
     transition all 150ms ease-in-out
 
     &:hover
       color $cor01
 
+.footer-menu__phone
+  color #494949
+  font-size 14px
+  font-weight 400
+  text-transform none
+
 .pays__list
   display flex
   flex-wrap wrap
-  max-width 185px
+  max-width none
   margin -5px
   width 100%
 
@@ -207,12 +248,10 @@
   padding 0
 
 .pays__svg
-  border 1px solid #ededed
   border-radius 2px
-  height 43px
-  padding 10px
+  height 20px
   transition all 150ms ease-in-out
-  width 60px !important
+  width auto !important
 
   &:hover
     border-color $cor01
@@ -283,14 +322,15 @@
 
 
 .copyright-lane
+  background-color white
   display flex
   justify-content center
 
 .copyright-lane__center
   align-items center
-  display flex
+  display block
   justify-content space-between
-  padding 32px 0
+  padding 15px 0
 
   > *
     flex 0 0 auto
@@ -302,11 +342,12 @@
 .copyright
   .std
   .std p
-    color #959595
+    color #8a8a8a
     font-size 12px
-    font-weight 500
-    line-height 20px
+    font-weight 400
+    line-height 18px
     margin 0
+    text-align center
 
 .social__title
   color black
@@ -351,3 +392,37 @@
 .safe
   min-width 240px
 
+
+.footer .newsletter-lane .newsletter
+  border-radius 5px
+  box-shadow none
+  background-color $cor01
+  margin 0
+  padding 20px 30px
+
+.newsletter__form .input-text
+  color #c1c1c1
+  font-size 14px
+  font-weight 400
+  height 37px
+  border 0 none !important
+
+  &:hover
+  &:focus
+    border 0 none !important
+
+.newsletter__submit
+  .newsletter__btn
+    background #5eb89d
+    height 37px
+    margin-left 5px
+    padding 0
+    width 100px
+
+    &:hover
+      background-color white
+      border 1px solid #5eb89d
+      color #5eb89d
+
+.ships__svg
+  height 20px

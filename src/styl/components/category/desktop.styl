@@ -3,17 +3,13 @@ body.catalog-category-view
     margin 0 auto
 
   .filters__filter
-    //.a--0
-    //  display none
+    background transparent
 
     .a--0current
       display block
 
       & + .ul--1
         display block
-    //
-    //.ul--1
-    //  display none
 
   .toolbar .amount
     visibility hidden
@@ -53,14 +49,12 @@ body.catalog-category-view
 
   .a--0current
   .a--0
-    border-bottom 1px solid #ebebeb
-    color #868686
+    color #9a9a9a
     display block
-    font-size 12px
-    font-weight 400
-    letter-spacing .5px
+    font-size 14px
+    font-weight 700
     line-height 16px
-    padding 15px 0
+    padding 10px 0
     transition all 150ms ease-in-out
 
     &:hover
@@ -68,24 +62,19 @@ body.catalog-category-view
 
 
   .count
-    color #868686
-    font-size 12px
-    font-weight 400
-    letter-spacing .5px
-    line-height 16px
-    transition all 150ms ease-in-out
+    display none
 
   .ul--1
-    border-bottom 1px solid #ebebeb
     margin 10px 0 0 0
     max-height 200px
     overflow auto
     padding 0 0 10px
 
   .label
-    color #999
-    font-size 11px
-    letter-spacing .5px
+    color #9a9a9a
+    font-size 14px
+    font-weight 700
+    line-height 16px
     transition all 150ms ease-in-out
 
   .a--1:hover
@@ -95,13 +84,13 @@ body.catalog-category-view
       color $cor01
 
 .filters__name
-  border-bottom 1px dashed #383838
-  color black
+  border-bottom 1px solid #ebebeb
+  color #494949
   font-size 14px
-  font-weight 500
-  letter-spacing .5px
-  line-height 46px
-  margin 0
+  font-weight 700
+  line-height 45px
+  margin 0 0 10px
+  padding 0 15px
   text-transform uppercase
 
 
@@ -116,8 +105,8 @@ body.catalog-category-view
     padding 0
 
 .toolbar
-  border-bottom 2px solid #e1e1e1
-  padding-bottom 13px
+  display none !important
+
   .view-mode
   .limiter
     display none
@@ -173,3 +162,29 @@ body.catalog-category-view
   font-size 12px
   font-weight 400
   letter-spacing .5px
+
+
+.products__item
+  flex 1 1 200px
+  margin-bottom 65px
+  max-width 245px
+  min-width 245px
+
+.ias-noneleft
+  display none !important
+
+.filters__filter
+  background-color transparent
+
+  .ul--0
+  ol
+    padding 0 15px
+
+.col-main .category-description
+  display none !important
+
+.wrapper
+  .search-title
+    h1
+    h1 small
+      font-size 16px

@@ -1,21 +1,44 @@
-@compre-junto
-
 <div class="product__description">
-    <h2 class="prod__title">Descrição do produto</h2>
-    <div class="product__desc">
-        @descricao
-        <div class="product__details">
-            @atributos
-        </div>
-
+    <div class="center">
+      <dl class="tabs">
+          <dt class="tabs__tab"><span>Descrição</span></dt>
+          <dd class="tabs__content">
+              <div class="std">@descricao</div>
+          </dd>
+            @if(informacaonutricional)
+            <dt class="tabs__tab"><span>Informação Nutricional</span></dt>
+                <dd class="tabs__content">
+                  <div class="std">@atributo(informacaonutricional)</div>
+            </dd>
+          @endif(informacaonutricional)
+      </dl>
     </div>
 </div>
-@avaliacoes(form)
 
 <div class="product__related">
-    <h3 class="showcase__title icon--tag">Produtos Relacionados</h3>
-    <h4 class="showcase__sub">Dê uma espiadinha, você vai gostar!</h4>
+  <div class="center">
+    <h3 class="showcase__title"><span>Escolhas Semelhantes</span></h3>
     <div class="carrossel">@relacionados</div>
+  </div>
+</div>
+<div class="product__recommended">
+  <div class="center">
+    <h3 class="showcase__title"><span>Recomendados para você</span></h3>
+    <div class="carrossel">@vendas-acima</div>
+  </div>
+
+</div>
+
+@avaliacoes(form)
+
+<div class="product__reviewed">
+  <div class="center">
+    <h3 class="showcase__title"><span>Melhores Avaliados</span></h3>
+    <div class="carrossel">
+      {{widget type="interface/widget_produtos" template="interface/widgets/produtos.phtml" identificador="reviewed" atributo="melhoresavaliados" carrossel="1" limite="8" markup="<h2 class='product__header'> <a href='@url' itemprop='url' title='Mais detalhes' class='product-link'> <span class='product__image product-image'> <img src='@foto(190x190)' alt='@nome(100)'> </span> </a></h2><div class='product__main'> <a href='@url' title='@nome(100)' class='product__name'>@nome</a> <div class='product__infos'> <div class='product__prices'> @if(is_disponivel) @preco @preco(parcelado) @preco(avista) @bt(comprar 'Comprar') @else(is_disponivel) <div class='product__out'>Produto Esgotado</div> @endif(is_disponivel) </div> </div></div>"}}
+      </div>
+  </div>
+
 </div>
 
 <script type="text/javascript">

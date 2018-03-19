@@ -1,5 +1,8 @@
 @media (max-width 1200px)
 
+  .header .mycart__header a:before
+    content svg-inline(cart2)
+
   .product-image-container
     display block
 
@@ -254,6 +257,7 @@
       font-size 11px
 
   .related__content
+    background-color transparent
     padding 0
     position static
     height auto
@@ -303,3 +307,32 @@
 
         @media (max-width 350px)
           font-size 9px
+
+  #customer-reviews .reviews__content
+    width auto
+
+  .catalog-product-view .wrapper-container
+    padding-top 149px
+
+  .tabs__content.open
+    background-color white
+
+  .prod__name
+    max-width calc(100vw - 30px)
+
+
+  .prod__shop
+    .minimal-price .label, .minimal-price .price, .regular-price .label, .regular-price .price, .special-price .label, .special-price .price
+      font-size 20px !important
+
+  .price-floater .price-box .old-price
+    margin-bottom 0 !important
+
+  .price-floater .add-to-cart
+    margin 0
+
+  .product__description
+    margin-bottom 40px !important
+
+  .product__recommended
+    display none
