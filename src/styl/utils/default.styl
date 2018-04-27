@@ -7,7 +7,7 @@ html
 .center
   display block
   margin 0 auto
-  max-width 1000px
+  max-width 1280px
   width calc(100% - 30px)
 
 .main
@@ -166,7 +166,12 @@ body:not(.cms-home)
 
 body.cms-home .wrapper
   .main-container
-    padding 30px 0
+    padding 0 0 30px
+    position relative
+
+    > .main
+      position relative
+      z-index 400
 
 .wrapper .main-container
   background #f3f3f3

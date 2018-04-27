@@ -1,5 +1,5 @@
 .wrapper-container
-  padding-top 202px
+  padding-top 223px
 
 .header-container
   background-color white
@@ -53,7 +53,7 @@
   align-items stretch
   border-bottom 1px solid #dfdfdf
   display flex
-  height 30px
+  height 50px
   overflow hidden
   transition all 150ms ease-in-out
 
@@ -99,12 +99,13 @@
 
 .welcome-message
   color #484848
-  font-size 12px
-  font-weight 400
+  font-size 14px
+  font-weight 600
 
   .welcome-message__name
   strong
-    font-weight 900
+    color $cor01
+    font-weight 700
     font-style italic
 
 .user-links__item
@@ -123,7 +124,7 @@
 .user-links
 .user-links__link
   color #484848
-  font-size 12px
+  font-size 14px
   font-weight 400
 
 .user-links__link
@@ -170,11 +171,12 @@
 
 .header-lane__bottom
   align-items center
+  background-color $cor01
   display flex
   padding 28px 0
 
   body.moving &
-    padding 10px 0 18px
+    padding 15px 0
 
 .icon--phone
   &:before
@@ -185,6 +187,7 @@
   display none
 
 .search
+  background-color white
   .search__input
     border 0 none
     box-shadow none
@@ -192,7 +195,7 @@
     color #999
     font-size 13px
     font-weight 400
-    height 40px
+    height 54px
     letter-spacing .3px
     line-height 18px
     padding 11px 20px
@@ -208,26 +211,33 @@
       letter-spacing .3px
       line-height 18px
 
+.header
+  .center
+    padding 0 20px
+
 .search__button
   background-color transparent
   border 0 none
+  border-left 1px solid $cor01
   border-radius 0
   box-shadow none
-  line-height 1
-  padding 0
+  line-height 0
+  padding 3px 0
   text-align center
-  width 43px
+  width 85px
 
   &:hover
     background-color transparent
     border 0 none
+    border-left 1px solid $cor01
 
   span
     display inline-block
 
 .icon--search
   &:before
-    content svg-inline(search)
+    line-height 0
+    content url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAC6ElEQVRYhb3XX6hVRRTH8c+5ZQlFJVGZSoEQGkj/LDBLUsxIsMQUFKWg6K0e8qEy5FYPQdhL0UP1Yolw+0tZYmWSWFhgZA/XUgwj6Y+h2T/8EyGmPczetNp39jn7ejf94MCstWdmffc+a2bWdDr3vKyhLsFUTMaFhe8XfI0vsLfpRFGnN+hzG+7FDIyp6XMIn+IlvDEcgL4uz24oJl2P27sEh3MwF69LX2POSAEewSeY3nSioGuwCU826Zz7C57GAxn/dryHbfgJJ6RcuFZ6+5sq/VdgPO4aDsBjmeDb0Y+NNXNsxipMK8bfGp7dicO4rw7gtM7VC8v2LCmJop7BQnxTN0HQjxjAX7g5+K/DHnyZGxRzYKDy7CksbxC4qlWGvvEanNkN4G5cHPwf4eFTCF7qOawN9igpJ4aoU2xEu3B58F+En0cAQHq5QzirsP+QWcp9mFIJ/loLwUmr5Plgn4fZOYDq8nmhheClVlfsuTmAScH+GztaBNiNfcGemAMYH+wf8FuLAPBdaJ+fA4jL43DLweFYaI/KARwJ9gXotAxwdmj/mQP4NthjMa7F4B1cFuwDOYCvKr4bWwSYhXODPZgD2Fzx5U7CU9X9FfutHMABfBB804rfSDURC4I9KHOolWfB4xX/sMqqGr1TsVfmOpUA2/B+8E/AlhEEf1Pa4kt9jHe7AcAy6SwvNVMqRuJO2UvjJPA7gu+4VFNkFQF+N/SwmIqdeAKX9gjcL5XoMzMxnq0b2MncC27x36QsdQJb8bm0vZ70711hBs7oAggbpBK/JwBcKRUUV/SYtE67pDzo7wVRV5YPFhAPYf8wAh+VSrmr8KhUlEbNw7roqPsCUaOxSMqP66X1XR4qJ/E9PpM2tHU4WBm/BK9UfG8r9ogmAFWNlUqrPqnM2te9O1iMVyu+9Zgfy/KmOiJdSg9qfnzvlHbBuDwnYUy3u2HbGsDSim9Ok9txmypz4UVpWT/4fwOUEB8WAL/+A3yHjLbplKSUAAAAAElFTkSuQmCC')
 
 .search__filter
   display none
@@ -343,10 +353,10 @@
       flex 0 0 auto
 
     span
-      color #494949
-      font-size 13px
-      font-weight 500
-      letter-spacing .5px
+      color $cor01
+      font-size 14px
+      font-weight 600
+      letter-spacing .25px
       text-transform uppercase
       transition all 150ms ease-in-out
 

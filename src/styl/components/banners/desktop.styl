@@ -1,121 +1,36 @@
 #banner__bannerhomefull
   margin 0 auto
 
-.main .col-main .banners-extras
-  margin-bottom 38px
+#banner__bannerregua
+  position relative
+  z-index 400
 
-.banners-extras
-  align-items stretch
-  display flex
-  justify-content space-between
+#banner__bannerhome
+  position relative
+  z-index 300
 
-  .banner--nojs .banner__item
+  .owl-item
+    transition all 1000ms ease-in-out
+    opacity 0
+
+    &.active
+      position relative
+      opacity 1
+      z-index 400
+
+  .banner__link
     overflow visible
 
-  .banner__item
-    line-height 0
+  .owl-wrapper-outer
+    overflow visible
 
-  .banner__link
-    border-radius 0
-    display inline-block
-    overflow hidden
-    position relative
-    transition all 150ms ease-in-out
-    width auto
+    img.d_img
+      height auto
+      top 0
+      transform translate(-50%, 0)
 
-    &:before
-      background-color white
-      color $cor01
-      content attr(title)
-      font-size 13px
-      font-weight 500
-      letter-spacing .49px
-      text-transform uppercase
-      line-height 15px
-      position absolute
-      padding 11px 15px
-      transition all 150ms ease-in-out
-      top 40px
-      z-index 200
-
-    img
-      transition all 150ms ease-in-out
-
-
-.banners-extras__middle
-  display flex
-  flex-flow column nowrap
-  flex 1 1 auto
-  justify-content space-between
-  max-width 555px
-
-  > .banner:first-child
-      .banner__link
-
-        @media (min-width 1201px)
-
-          &:hover
-            &:before
-              right -100%
-
-          &:before
-            right 0
-
-.banners-extras__bottom
-  display flex
-  justify-content space-between
-
-  .banner:nth-child(1)
-    .banner__link
-
-      @media (min-width 1201px)
-        &:hover
-          &:before
-            left -100%
-
-        &:before
-          left 0
-
-  .banner:nth-child(2)
-    .banner__link
-      @media (min-width 1201px)
-        &:hover
-          &:before
-            right -100%
-
-        &:before
-          right 0
-
-.banners-extras__left
-.banners-extras__right
-  display flex
-  flex 1 1 200px
-  flex-flow column nowrap
-
-.banners-extras__left
-  .banner__link
-
-    @media (min-width 1201px)
-      &:hover
-        &:before
-          left -100%
-
-      &:before
-        left 0
-
-.banners-extras__right
-  align-items flex-end
-  justify-content space-between
-
-  .banner__link
-
-    @media (min-width 1201px)
-      &:hover
-        &:before
-          right -100%
-
-      &:before
-        right 0
+.main .col-main .banners-extras
+  margin-bottom 38px
 
 .banner--nojs .banner__wrapper
   column-count auto
@@ -123,17 +38,29 @@
 .cms-home .header-container + .banner
   margin 0
 
+#banner__bannervitrine
+  margin-bottom 70px
+
+  .banner__wrapper
+    display flex
+    justify-content space-between
+
+    > *
+      width auto
+      flex 0 0 auto
+
 #banner__bannerregua
+  @extend .center
   align-items center
   background-color white
   display flex
-  height 140px
-  margin 0
+  height 123px
+  margin 0 auto 40px
 
   .banner__wrapper
-    @extend .center
     display flex
-    justify-content space-between
+    justify-content space-around
+    width 100%
 
     > *
       flex 0 0 auto

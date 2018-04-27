@@ -39,7 +39,7 @@
 
 .products__item
   flex 1 1 200px
-  margin-bottom 45px
+  margin-bottom 20px
   padding 0 15px
 
 .product__image
@@ -50,24 +50,26 @@
 .products__case
   align-items center
   box-shadow none
-  height 400px
+  height 300px
   justify-content center
   padding 10px
   transition all 150ms ease-in-out
 
   .main-container &
-    height 455px
+    height 400px
 
 
 .product__name
-  color #494949
+  color #484848
   display block
   font-size 14px
   font-weight 400
   flex 0 0 auto
-  line-height 14px
-  height 42px
+  letter-spacing .25px
+  line-height 18px
+  height 36px
   margin 0 0 10px
+  text-align left
   overflow hidden
 
 .price-box
@@ -78,7 +80,7 @@
     flex-flow column nowrap
     height 53px
     justify-content flex-end
-    align-items center
+    align-items flex-start
 
   .old-price
     color #d1d1d1
@@ -98,11 +100,11 @@
     font-weight 700
 
     .label
-      color $cor01
-      text-transform lowercase
+      display none
 
 .price-box-parcelado
   order 2 !important
+  text-align left
 
   span
     color #494949
@@ -118,11 +120,6 @@
 .preco-parcelado-sem-juros
 .preco-parcelado
   display block
-
-  .upto
-  .s-juros
-  .juros
-    display none
 
 
 
@@ -185,8 +182,53 @@
 
 .owl-prev
 .owl-next
-  top 50%
-  transform translateY(-50%)
+  background-color #f6f6f7
+  border 0 none
+  border-radius 0
+  height auto
+  box-shadow none
+  position relative
+  top auto
+  left auto
+  right auto
+  transform none
+  transition all 150ms ease-in-out
+  width 54px
+
+  &:hover
+    background-color $cor01
+
+    &:before
+      color white
+
+  &:before
+    color #908e8f
+    font-size 11px
+    line-height 38px
+    transition all 150ms ease-in-out
+
+.owl-buttons
+  border 1px solid #d4d4d4
+  box-shadow 0 2px 4px 0 rgba(0, 0, 0, .13)
+  overflow hidden
+  border-radius 10px
+  position absolute
+  top -76px
+  right 13px
+  height 38px
+  display flex
+  align-items stretch
+
+  &:before
+    content ''
+    border-left 1px solid #908e8f
+    height 20px
+    width auto
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+    z-index 30
 
 .owl-pagination
   display none

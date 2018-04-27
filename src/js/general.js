@@ -38,8 +38,29 @@ $j(document)
             $parent0          = $j('.categories .li--0.parent'),
             $menuBtn          = $j('.menu--mobile__btn'),
             $menuEnv          = $j('.menu--mobile__env'),
-            $btnBack          = $j('.btn--back');
+            $btnBack          = $j('.btn--back'),
+            $tabsList         = $j('.tabs-list'),
+            $tabsItem         = $j('.tabs-list__item');
 
+
+          if($tabsList.length > 0) {
+
+              let target = '',
+                  $content;
+
+              $tabsItem.on('click', function(){
+                  target = $j(this).data('target');
+                  $content = $j(this).parents('.tabs-list').siblings('.content-list');
+
+                  $j(this).parents('.tabs-list').find('.tabs-list__item').removeClass('tabs-list__item--active');
+                  $j(this).addClass('tabs-list__item--active');
+
+                  $content.find('.content-list__item').removeClass('content-list__item--active');
+                  $content.find(`.content-list__item--${target}`).addClass('content-list__item--active');
+
+              });
+
+          }
 
         if($menuCenter.length > 0) {
 
