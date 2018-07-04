@@ -9,12 +9,22 @@
 
   #banner__bannerregua
     height auto
-    margin-top 15px
+    margin 40px 0 0
 
     width 100%
     .banner__wrapper
       width 100%
       max-width none
+
+  .main-container
+    .showcase-lane
+      @extend .center
+      margin-bottom 100px
+
+      &.product__reviews
+        margin-bottom 0
+
+
 
 .prod__img
   flex 1 1 520px
@@ -28,9 +38,10 @@
   margin 0
 
 .product-essential
+  @extend .center
   background-color white
-  margin 0
-  padding 20px 0 35px
+  margin 0 auto 100px
+  padding 20px 80px
 
 .brand
   padding 0
@@ -72,39 +83,21 @@
   margin-bottom 30px
 
 .prod__name
-  margin-bottom 10px
-  max-width 400px
+  margin-bottom 15px
 
   h1
-    color #494949
+    color $cor01
     font-size 24px
     font-weight 700
     letter-spacing .5px
-    line-height 26px
+    line-height 30px
     text-transform uppercase
 
-.prod__short-desc
-  color #2a2a2a
-  font-size 14px
-  font-weight 400
-  letter-spacing .5px
-  line-height 18px
-  text-align justify
-  max-width 300px
-
-  > *
-    display inline
-
-  .see-more
-    color black
-    cursor pointer
-    font-weight 600
-    padding-left 3px
-    text-transform uppercase
-    transition all 150ms ease-in-out
-
-    &:hover
-      color $cor01
+.prod__shop
+  .price-box .minimal-price, .price-box .regular-price, .price-box .special-price
+    font-size 30px
+    font-weight 700
+    letter-spacing .25px
 
 .reviews__resume
 .reviews__ratings
@@ -113,24 +106,61 @@
   padding 0
 
 .subtitle
-  color $cor02
+  color $cor01
   font-size 18px
-  font-weight 900
-  letter-spacing .5px
-  text-transform uppercase
+  font-weight 600
+  letter-spacing .25px
+  text-transform none
+  margin-bottom 40px
+
+.product-collateral .product-rate .rating:before
+  font-size 32px
 
 .reviews__resume
   flex 0 0 230px
 
-  .product-rate
-    display none
+
+.prod__shop .product-rate .to-rate
+  color #484848
+  font-size 14px
+  font-weight 600
+  letter-spacing .25px
 
 .reviews__no-reviews
   padding-top 90px
 
+.reviews__add .btn
+  background-color $cor01
+
+  &:hover
+    background-color white
+    border-color $cor01
+
+.reviews__resume .product-rate .percent
+  display none
+
+.reviews__resume .product-rate
+  justify-content flex-start
+  align-items flex-start
+
 .reviews__ratings
-  flex 0 0 425px
-  margin 0 65px 0 45px
+  flex 1 1 auto
+  margin 0 65px 0 0
+  order -1
+
+.reviews__resume .product-rate .amount
+  &:before
+    content 'Baseado em '
+
+  &
+  &:before
+    color #494949
+    font-size 14px
+    font-weight 400
+    letter-spacing .5px
+
+.product-collateral .product-rate .rating-box:before
+  font-size 32px
 
 .reviews__content
 
@@ -190,84 +220,99 @@
     display flex
     position relative
     transform none
-    margin 0 10px 0 0
-    left 0
-    flex 0 0 52px
+    margin -2px 0 0
     user-select none
+    position absolute
+    left 20px
+    top 50%
+    transform translateY(-50%)
+    width 60px
 
     .input-box
+      align-items center
+      display flex
       width 100%
 
     input
-      background-color #e4e4e4
-      border 0 none
+      background-color #5c9000
+      border 0 none !important
       border-radius 0 !important
-      color #494949
-      font-size 17px
-      font-weight 700
+      color white
+      font-size 18px
+      font-weight 400
       height 44px
       transition all 150ms ease-in-out
-      width 100%
-
-      &:hover
-      &:focus
-        border-color $cor02 !important
+      width 45px
 
       &:focus
-        color $cor02
+        color white
 
     .bt-box
+      background-color #f6f6f7
+      border-radius 3px
       box-shadow none
       position static
+      width auto
+      order -1
+      transform none
+      overflow hidden
+      flex 0 0 auto
 
     .bt
       background-color transparent
-      border 0 none
       border-radius 0
-      color white
-      font-size 12px
-      font-weight 400
-      height 24px
-      line-height 24px
-      top -34px
-      position absolute
+      display block
+      height 25px
+      width 15px
+      position relative
       transition all 150ms ease-in-out
-      width 21px
+
+      &:hover
+        background-color $cor01
+
+        &:before
+          color white
 
       &:before
-        display none
-
-      span
-        display block
-        color #494949
-        font-size 21px
-        font-weight 700
+        color #6aa601
+        line-height 25px
+        transition all 150ms ease-in-out
 
       &.plus
-        right 0
-        left auto
+        &:after
+          content ''
+          border-bottom 1px solid #cdcccd
+          position absolute
+          width 9px
+          left 50%
+          bottom -1px
+          transform translateX(-50%)
 
-        span
-          color $cor02
+
+      span
+        display none
+
+      &.type
+        display none
 
 
   .add-to-cart
-    margin-bottom 25px
+    margin-bottom 50px
 
   .add-to-cart-btn
-    background-color $cor02
+    background-color #6aa601
     border 0 none
-    border-bottom 3px solid #189651
-    font-size 17px
-    font-weight 700
-    height 44px
-    letter-spacing .5px
-    max-width 180px
-    padding 0
+    border-bottom 4px solid #578800
+    font-size 24px
+    font-weight 400
+    height 66px
+    padding 0 0 0 40px
     transition all 150ms ease-in-out
+    max-width 350px
+    width 100%
 
     &:hover
-      background-color #189651
+      background-color #6aa601
       color white
 
   .price-box
@@ -284,48 +329,53 @@
   margin-bottom 24px !important
 
 .frete__title
-  display none
+  display block
+
+#simuladorCase
+  display flex
+  flex-wrap wrap
+
+  .frete__title
+    display inline-flex
+    align-items center
+    border 0 none
+    flex 0 0 100%
+    box-shadow none
+    text-align left
+    justify-content flex-start
+    padding 0
+
+    &:before
+      content url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAB/0lEQVQ4jZ3UTYhPURjH8c//eJsRExl5SWykhKQpCxuGjc0UsXDzsnBFFnZKCtlYSMmGMnWlxF2NIhajvJVEIS/ZKAuFGk0mURjca3HPn9u/MWp+m/Ocep7vec7znOc0yrIU0nw5DqMb33AFR4osGTRGNRo7Ly3DbczAOczFejzF2iJLhsYCHh8znYELRZakIc0nx4NWYkdI87dYjZ8I+IQzRZYM/A+8ItqL4tqBBdFegpnY1xI3jGMhzTvivoHPRZYUTYeAj9FurzlNiPZQ9GnVpJDmp3EPN3ELd0Kaz6mDz7cElZgY1370jACeiu04gg3R5xoO1sFncRxzQ5q/wv2Y6RaswdIRwPAV74oseVdkyXucxOKQ5guhEZ/bfHShU9WkNzGT1to2dQoJduAhQpElQyHNt2Eddo+PjhtxCC9U9V0er/svlfiFi6p3H0Kanyiy5FRI8160NcHDMdvuUWAjwTtr+wMhzV/iB7pG6vhYNRs3VM/1SxM8scXp238gk9A2in97sxSP8F5V3148UQ1JGiFlLWgYlzENq9CHB5iFvZiH/kZZVjEhzadjiqrjPXimauhajKuBf8W1iAl0YxdeYys+FFny9g84wmdiQDV9sCke1lbLuuHvND7HVdVfA5uLLOmj+ivqGoxZ7sFdXC+y5LtRFNL8KPbjsWq8wW+3lJOz7f5yZAAAAABJRU5ErkJggg==')
+      margin-right 10px
+      flex 0 0 auto
+
+    span
+      color #908e8f
+      font-size 14px
+      font-weight 400
+
+
+    &:hover
+      background-color transparent
+
+    svg
+      display none
 
 .frete__content
   display block
 
 .frete__form
-  display block
+  background-color #f7f7f7
+  display flex
   position relative
 
   label
-    align-items center
-    border 0 none
-    box-shadow none
-    background-color transparent
-    display inline-flex
-    font-size 0
-    height 55px
-    line-height 0
-    padding 0 0 0 12px
-    position absolute
-    left 0
-    top 0
+    display none
 
-    &:before
-      content svg-inline(shipping-product)
-      flex 0 0 auto
-      margin-right 12px
-
-    &:after
-      color black
-      content 'Frete'
-      font-size 13px
-      font-weight 500
-      letter-spacing .8px
-      line-height 1
-      text-transform uppercase
 
   .frete__actions
-    bottom 7px
-    position absolute
-    right 0
-    top 7px
+    position static
 
     .btn
       background-color transparent
@@ -357,16 +407,18 @@
         display none
 
   .input-text
-    border 1px solid #e1e1e1 !important
-    color black
-    font-size 15px
-    font-weight 500
-    letter-spacing .8px
+    background-color #f7f7f7
+    border 0 none !important
+    color #908e8f
+    font-size 18px
+    font-weight 400
+    letter-spacing 1px
     line-height 1
     height 55px
-    padding 0 110px 0 130px
+    padding 0 15px
+    text-align center
     transition all 150ms ease-in-out
-    width 100%
+    width 180px
 
     &:hover
     &:focus
@@ -381,6 +433,7 @@
   .frete__results
     margin-top 10px
     padding 5px 15px 15px 15px
+    width 100%
 
     .title
       font-size 13px
@@ -506,12 +559,12 @@
 .price-floater--on
   opacity 1
   visibility visible
-  z-index 200
+  z-index 500
 
 .price-floater--closed
   opacity 1
   visibility visible
-  z-index 200
+  z-index 500
   right -251px
 
   .price-floater__close
@@ -711,12 +764,13 @@
   .std
     p
     span
-      color #929292
+    li
+      color #908e8f
       font-family $font01 !important
-      font-size 14px
-      font-weight 500
-      letter-spacing .24px
-      line-height 27px
+      font-size 24px
+      font-weight 400
+      letter-spacing .25px
+      line-height 48px
 
     p
       margin-bottom 25px
@@ -836,8 +890,6 @@
     margin-bottom 5px
     text-transform none
 
-.reviews__resume
-  display none
 
 .reviews__list
   .name
@@ -887,8 +939,7 @@
       background-color $cor01
 
 #product_addtocart_form
-  @extend .center
-  align-items center
+  align-items flex-start
   display flex
   flex-wrap wrap
 
@@ -948,28 +999,17 @@
   span
     color $cor02
 
-.product__description
-  position relative
-
-  &:before
-    border-top 1px solid #e1e1e1
-    content ''
-    width 100%
-    top 80px
-    left 0
-    position absolute
-
 #customer-reviews
-  background-color white
+  background-color transparent
+  margin-bottom 0
 
   .reviews__title
     display none
 
   .reviews__content
-    @extend .center
     display flex
     justify-content space-around
-    padding 40px 0
+    padding 0
 
 #product-review-table
   .form-list

@@ -2,36 +2,14 @@
     @fotos
 </div>
 <div class="prod__shop">
-    <ul class="attributes-list">
-        @if(antioxidante)
-        <li class="attributes-list__item attributes-list__item--oxidante">
-            Anti Oxidante
-        </li>
-        @endif(antioxidante)
-        @if(semgluten)
-        <li class="attributes-list__item attributes-list__item--gluten">
-            Sem Glúten
-        </li>
-        @endif(semgluten)
-        @if(semacucar)
-        <li class="attributes-list__item attributes-list__item--acucar">
-            Sem Açucar
-        </li>
-        @endif(semacucar)
-    </ul>
     <div class="prod__infos">
-        <div class="prod__brand">
-            @marca
-        </div>
         <div class="prod__name">
             <h1>@nome</h1>
         </div>
         @avaliacoes
     </div>
-    <div class="prod__short-desc std">@descricao(curta)</div>
     @if(is_disponivel)
     @preco
-    @preco(avista)
     @preco(parcelado)
     @variacoes
     @bt(comprar)
@@ -39,10 +17,11 @@
         <span class="price-floater__close"></span>
         <div class="price-floater__prices">
             @preco
-            @preco(avista)
+            @preco(parcelado)
         </div>
         @bt(comprar)
     </div>
+    @simulador-frete
     @else(is_disponivel)
     <div class="prod__esgotado">
         <div class="title title--sm">Produto Esgotado</div>

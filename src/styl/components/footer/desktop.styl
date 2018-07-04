@@ -60,10 +60,9 @@
 .newsletter__text
   color white
   font-size 14px
-  font-weight 900
+  font-weight 700
   flex 0 0 auto
   margin 0 15px 0 0
-  padding-top 3px
   text-transform uppercase
 
 .newsletter__name
@@ -116,53 +115,14 @@
     position static
 
 
-// About us
-.wrapper .about-us
-  display flex
-  justify-content center
-  margin-bottom 0
-
-.about-us__center
-  &:before
-    flex 0 0 auto
-    margin-right 40px
-
-.about-us__info
-  flex 1 1 auto
-
-.about-us__title
-  color #343434
-  display block
-  font-size 25px
-  font-weight 500
-  letter-spacing .49px
-  line-height 1
-  margin-bottom 13px
-  text-transform uppercase
-
-.about-us__desc
-  .std
-    color #959595
-    font-size 14px
-    font-weight 400
-    letter-spacing .49px
-    line-height 21px
-    text-align justify
-
-    p
-      margin 0
-
-.icon--logo
-  &:before
-    content svg-inline(logo)
-
-
 // Footer
 .footer-container
   background #f3f3f3
   border-bottom 3px solid $cor01
   margin 0
   padding 0
+  position relative
+  z-index 500
 
 .footer-menu
   flex 1 1 250px
@@ -181,7 +141,7 @@
 
 .footer-menu .std
 .footer-menu__email
-  color #494949
+  color white
   font-size 14px
   font-weight 400
   line-height 18px
@@ -193,7 +153,7 @@
   margin-bottom 20px
 
 .menus-lane
-  border-top 1px solid #dfdfdf
+  background-color $cor02
 
 .wrapper
   .menus-lane
@@ -208,10 +168,10 @@
   padding 80px 0 10px
 
 .footer-menu__title
-  color $cor01
+  color white
   display block
   font-size 14px
-  font-weight 900
+  font-weight 700
   margin-bottom 25px
   text-transform uppercase
 
@@ -221,33 +181,39 @@
     margin-bottom 8px
 
   .a--0
-    color #494949
+    color white
     font-size 14px
     font-weight 400
     text-transform none
     transition all 150ms ease-in-out
 
     &:hover
-      color $cor01
+      color $cor03
 
 .footer-menu__phone
-  color #494949
+  color white
   font-size 14px
   font-weight 400
   text-transform none
 
 .pays__list
+.ships__list
   display flex
   flex-wrap wrap
   max-width none
-  margin -5px
+  margin 0
   width 100%
 
 .pays__item
-  margin 5px !important
-  padding 0
+.ships__item
+  background-color white
+  margin 0 !important
+  padding 10px 5px
+
+
 
 .pays__svg
+.ships__svg
   border-radius 2px
   height 20px
   transition all 150ms ease-in-out
@@ -394,7 +360,6 @@
 
 
 .footer .newsletter-lane .newsletter
-  border-radius 5px
   box-shadow none
   background-color $cor01
   margin 0
@@ -411,18 +376,36 @@
   &:focus
     border 0 none !important
 
+  &::placeholder
+    font-style italic
+
 .newsletter__submit
+  flex 0 0 auto
+
   .newsletter__btn
-    background #5eb89d
+    background $cor03
+    color $cor01
     height 37px
     margin-left 5px
     padding 0
     width 100px
 
-    &:hover
-      background-color white
-      border 1px solid #5eb89d
-      color #5eb89d
-
 .ships__svg
   height 20px
+
+.footer-menu .newsletter
+  background-color transparent
+  margin 0
+  padding 0
+  box-shadow none
+
+.payment-lane
+  display flex
+  flex-wrap wrap
+  width 100%
+
+  > *
+    flex 1 1 250px
+
+    &:first-child
+      flex 1 1 650px

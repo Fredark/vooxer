@@ -1,4 +1,5 @@
 body.catalog-category-view
+body.catalogsearch-result-index
   .banner--nojs img.d_img
     margin 0 auto
 
@@ -14,7 +15,8 @@ body.catalog-category-view
   .toolbar .amount
     visibility hidden
 
-
+  .col-left
+    display none
 
 .col2-left-layout
   > .main
@@ -33,13 +35,80 @@ body.catalog-category-view
   .title
     display none
 
+.main-container .filters__list
+  @extend .center
+  align-items center
+  background-color $cor01
+  display inline-flex
+  height 80px
+  margin 0 0 55px
+  padding 0 30px
+  position relative
+  left 50%
+  transform translate(-50%)
+  z-index 500
+
+  &:before
+    content 'Filtros:'
+    color white
+    font-size 14px
+    font-weight 700
+    text-transform uppercase
+    flex 0 0 auto
+    margin-right 130px
+
+  .ul--0
+  ol
+    box-shadow 0 2px 3px 0 rgba(0, 0, 0, .3)
+    position absolute
+    top 100%
+    left -20px
+    padding 15px 20px
+    max-height 250px
+    overflow auto
+    background-color white
+    position absolute
+    z-index 500
+    width 250px
+    transition all 150ms ease-in-out
+    opacity 0
+    visibility hidden
+    z-index -1
+
+  ol
+    li
+      margin-bottom 5px
+
+      &:last-child
+        margin-bottom 0
+
+    .link
+      transition all 150ms ease-in-out
+
+      &:hover
+        .label
+          color $cor01
+
+.filters__filter:not(:last-child)
+  margin 0 50px 0 0
+
+
 .filters__filter
   border 0 none
   box-shadow none
+  margin 0
   padding 0
+  position relative
 
   &:hover
     box-shadow none
+
+  &.filters__filter--on
+    .ul--0
+    ol
+      opacity 1
+      visibility visible
+      z-index 400
 
   .li--0
     margin-bottom 20px
@@ -54,7 +123,7 @@ body.catalog-category-view
     font-size 14px
     font-weight 700
     line-height 16px
-    padding 10px 0
+    padding 5px 0
     transition all 150ms ease-in-out
 
     &:hover
@@ -65,10 +134,9 @@ body.catalog-category-view
     display none
 
   .ul--1
-    margin 10px 0 0 0
-    max-height 200px
-    overflow auto
-    padding 0 0 10px
+    margin 0
+    overflow visible
+    padding 0
 
   .label
     color #9a9a9a
@@ -84,21 +152,41 @@ body.catalog-category-view
       color $cor01
 
 .filters__name
-  border-bottom 1px solid #ebebeb
-  color #494949
+  align-items center
+  color white
+  cursor pointer
+  display inline-flex
   font-size 14px
   font-weight 700
   line-height 45px
-  margin 0 0 10px
-  padding 0 15px
+  margin 0
+  padding 0
   text-transform uppercase
+  transition all 150ms ease-in-out
+
+  &:after
+    background-color white
+    border-radius 10px
+    content url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAbUlEQVQImV3OQRGCcBTE4Q/GAmShgkTQABy0glUgAAeIgBG0AhWs4GX/DLozb97ht+/tVlU/tWjwxsevdlbjgjXzb3phRlPjgTFgOJjWJHTYTgH37FuiztnXVFKM8rlNlXK8FHg0lpgBz9TZ9QWFwxQaiGvmXQAAAABJRU5ErkJggg==')
+    display inline-flex
+    align-items center
+    justify-content center
+    line-height 0
+    height 38px
+    margin-left 40px
+    width 38px
+    transition all 150ms ease-in-out
+
+  &:hover
+  .filters__filter--on &
+    color $cor03
 
 
 .filters__filter .li--0:not(:last-child)
   margin 0
 
 .filters__swatches
-  margin-top 15px
+  margin-top 0
 
   .a--0
   .a--0current
@@ -140,8 +228,35 @@ body.catalog-category-view
     letter-spacing .5px
     opacity 1
 
-.category-title
-  display none
+.category__products
+  .products__list
+    justify-content space-between
+    padding 0 35px
+
+.wrapper .main-container
+  .category-title
+  .search-title
+    padding 20px 0 0
+
+    small
+      display none
+
+    h1
+      border 0 none
+      color $cor01
+      font-size 72px
+      font-weight 600
+      letter-spacing .25px
+      text-align center
+      text-transform uppercase
+      padding 55px 0
+      margin 0
+      position relative
+      z-index 400
+
+    &.banner-on
+      h1
+        color white
 
 .category-description
   border 0 none

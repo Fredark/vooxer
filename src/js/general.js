@@ -40,7 +40,36 @@ $j(document)
             $menuEnv          = $j('.menu--mobile__env'),
             $btnBack          = $j('.btn--back'),
             $tabsList         = $j('.tabs-list'),
-            $tabsItem         = $j('.tabs-list__item');
+            $tabsItem         = $j('.tabs-list__item'),
+            $categoryTitle    = $j('.category-title, .search-title'),
+            $filtersList      = $j('.filters__list'),
+            $filtersFilter    = $j('.filters__filter');
+
+
+          if($filtersList.length > 0) {
+            $j('.breadcrumb').before($filtersList);
+
+            $filtersFilter.on('click', function(e){
+                if($j(e.target).hasClass('filters__filter') || $j(e.target).hasClass('filters__name')) {
+                    if($j(this).hasClass('filters__filter--on')) {
+                        $j(this).removeClass('filters__filter--on');
+                    } else {
+                      $filtersFilter.removeClass('filters__filter--on');
+                      $j(this).toggleClass('filters__filter--on');
+                    }
+
+                }
+            });
+          }
+
+
+          if($categoryTitle.length > 0) {
+              $j('.main-container').prepend($categoryTitle);
+
+              if($j('.main-container > .banner').length > 0) {
+                  $categoryTitle.addClass('banner-on');
+              }
+          }
 
 
           if($tabsList.length > 0) {
