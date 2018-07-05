@@ -9,24 +9,19 @@
   margin-bottom 25px
 
 .showcase__title
-.showcase__sub
   display block
   text-align center
 
-.showcase__title.icon--tag
-  display block
-
-  &:before
-    display block
-    margin-bottom 8px
-
 .showcase__title
-  color #343434
-  font-size 25px
-  font-weight 500
-  letter-spacing .49px
-  line-height 1
-  margin-bottom 5px
+  background-color #01b8e3
+  color white
+  font-size 14px
+  font-weight 700
+  line-height 56px
+  margin-bottom 0
+  text-align center
+  max-width 270px
+  padding-right 60px
   text-transform uppercase
 
 
@@ -50,26 +45,26 @@
 .products__case
   align-items center
   box-shadow none
-  height 300px
+  height 500px
   justify-content center
   padding 10px
   transition all 150ms ease-in-out
 
   .main-container &
-    height 400px
+    height 500px
 
 
 .product__name
-  color #484848
+  color #393939
   display block
   font-size 14px
-  font-weight 400
+  font-weight 700
   flex 0 0 auto
-  letter-spacing .25px
   line-height 18px
   height 36px
-  margin 0 0 10px
-  text-align left
+  margin 0 0 30px
+  text-align center
+  text-transform uppercase
   overflow hidden
 
 .price-box
@@ -80,13 +75,14 @@
     flex-flow column nowrap
     height 53px
     justify-content flex-end
-    align-items flex-start
+    margin-bottom 30px
+    align-items center
 
   .old-price
-    color #d1d1d1
+    color #959595
     font-size 14px
-    font-weight 400
-    margin-bottom 15px !important
+    font-weight 600
+    margin-bottom 5px !important
     text-decoration line-through
 
     .label
@@ -95,27 +91,38 @@
   .special-price
   .regular-price
   .minimal-price
-    color $cor01
-    font-size 24px
-    font-weight 700
 
-    .label
-      display none
+
+    .label span
+      color $cor01
+      font-size 18px
+      font-weight 400
+      text-transform lowercase
+
+    .price span
+      color $cor01
+      font-size 24px
+      font-weight 600
 
 .price-box-parcelado
-  order 2 !important
-  text-align left
+  margin 0
+  text-align center
+
+  .upto
+  .s-juros
+  .juros
+    display none
 
   span
-    color #494949
+    color #959595
     font-size 14px
     font-weight 400
 
   .num
   .value
     span
-      color #494949 !important
-      font-weight 900
+      color $cor01 !important
+      font-weight 500
 
 .preco-parcelado-sem-juros
 .preco-parcelado
@@ -130,14 +137,17 @@
   display block
   flex-wrap nowrap
   margin 0 0 3px
-  order 1 !important
 
   .main-container &
     text-align center
 
   span
-    color #494949
+    color #959595
     font-size 14px
+
+  .price span
+    color $cor01
+    font-weight 600
 
   .label
     margin 0
@@ -182,10 +192,10 @@
 
 .owl-prev
 .owl-next
-  background-color #f6f6f7
   border 0 none
-  border-radius 0
-  height auto
+  border-radius 50%
+  background #02afdc
+  height 20px
   box-shadow none
   position relative
   top auto
@@ -193,42 +203,33 @@
   right auto
   transform none
   transition all 150ms ease-in-out
-  width 54px
+  width 20px
 
   &:hover
-    background-color $cor01
+    background-color white
 
     &:before
-      color white
+      color #02afdc
 
   &:before
-    color #908e8f
-    font-size 11px
-    line-height 38px
-    transition all 150ms ease-in-out
+    color white
+    font-size 8px
+    line-height 20px
+
+.owl-next
+  margin-left 5px
 
 .owl-buttons
-  border 1px solid #d4d4d4
-  box-shadow 0 2px 4px 0 rgba(0, 0, 0, .13)
+  border 0 none
   overflow hidden
   border-radius 10px
   position absolute
-  top -76px
-  right 13px
-  height 38px
+  top -39px
+  right auto
+  left 205px
+  height auto
   display flex
   align-items stretch
-
-  &:before
-    content ''
-    border-left 1px solid #908e8f
-    height 20px
-    width auto
-    position absolute
-    left 50%
-    top 50%
-    transform translate(-50%, -50%)
-    z-index 30
 
 .owl-pagination
   display none
@@ -242,31 +243,69 @@
   .main-container &
     transition all 150ms ease-in-out
 
-    @media (min-width 1200px)
-      &:hover
-        transform scale(1.05)
-
-.products__title
-  align-items center
-  display flex
-  margin 0
-
-  span
-    color $cor02
-    font-size 18px
-    font-weight 900
-    flex 0 0 auto
-    margin 0 55px
-    text-transform uppercase
-
-  &:before
-  &:after
-    content ''
-    border-top 1px solid #e8e8e8
-    flex 1 1 auto
-
 .product-rate
   display none
 
+.products__title
+  background-color #06c2ee
+  margin-bottom 0
+
 .price-box-avista .price
   font-weight 900
+
+
+.showcase-timer
+  margin-top 30px
+
+.showcase-timer__title
+  color $cor01
+  display block
+  font-size 12px
+  font-weight 400
+  text-transform uppercase
+  text-align center
+  margin-bottom 15px
+
+.showcase-timer__list
+  display flex
+  justify-content center
+
+.showcase-timer__item
+  margin-right 18px
+  position relative
+
+  &:after
+    color $cor01
+    content ':'
+    font-size 18px
+    font-weight 700
+    line-height 1
+    position absolute
+    left 55px
+    top 15px
+
+  &:last-child
+    margin-right 0
+
+    &:after
+      display none
+
+.showcase-timer__value
+  background-color $cor01
+  color white
+  font-size 18px
+  font-weight 700
+  line-height 49px
+  text-align center
+  display block
+  height 48px
+  width 48px
+
+.showcase-timer__label
+  color $cor01
+  display block
+  font-size 11px
+  font-weight 400
+  text-transform uppercase
+  text-align center
+  margin-top 10px

@@ -1,123 +1,6 @@
-// Newsletter
-
-.wrapper section.newsletter
-  margin-bottom 75px
-
-.wrapper .newsletter-lane
-  margin-bottom -40px
-
-.newsletter__center
-  align-items stretch
-  display flex
-
-.newsletter__banner
-  flex 0 0 auto
-  max-width 60%
-
-.newsletter__info
-  align-items center
-  border 1px solid #e1e1e1
-  border-left 0 none
-  display flex
-  flex 1 1 auto
-  justify-content center
-  transition all 150ms ease-in-out
-
-  &:hover
-    border-color $cor01
-
-.newsletter__form
-  display flex
-  flex-flow row nowrap
-  flex 1 1 auto
-  margin 0
-
-
-  > *
-    padding 0
-
-  .input-text
-    border 1px solid #e1e1e1 !important
-    border-radius 0 !important
-    box-shadow none
-    color #959595
-    font-size 15px
-    font-weight 500
-    height 48px
-    letter-spacing .3px
-    line-height 18px
-    padding 15px
-    transition all 150ms ease-in-out
-
-    &::placeholder
-      color #959595
-
-    &:focus
-    &:hover
-      border-color $cor01 !important
-      color #333
-
-.newsletter__text
-  color white
-  font-size 14px
-  font-weight 700
-  flex 0 0 auto
-  margin 0 15px 0 0
-  text-transform uppercase
-
-.newsletter__name
-  margin-bottom 10px
-  order 0
-
-.newsletter__email
-  order 1
-
-.newsletter__gender
-  flex 0 0 100%
-  display flex
-  justify-content center
-  min-width 0
-  order 2
-
-.newsletter__submit
-  order 3
-
-.newsletter
-  .male-label
-  .female-label
-    border 0 none
-    border-radius 0
-    color #959595
-    flex 0 0 auto
-    font-size 15px
-    font-weight 500
-    letter-spacing .3px
-    line-height 49px
-    padding 0
-    transition all 150ms ease-in-out
-
-    &:before
-      display none
-
-    &.checked
-      background-color transparent
-      border-color transparent
-      color $cor01
-
-  .female-label
-    margin-right 30px
-    order 0
-
-  .male-label
-    order 1
-
-  .input-radio
-    position static
-
-
 // Footer
 .footer-container
-  background #f3f3f3
+  background #fcfcfc
   border-bottom 3px solid $cor01
   margin 0
   padding 0
@@ -141,7 +24,7 @@
 
 .footer-menu .std
 .footer-menu__email
-  color white
+  color #424242
   font-size 14px
   font-weight 400
   line-height 18px
@@ -152,8 +35,6 @@
   display block
   margin-bottom 20px
 
-.menus-lane
-  background-color $cor02
 
 .wrapper
   .menus-lane
@@ -165,10 +46,10 @@
   display flex
   flex-wrap wrap
   justify-content space-between
-  padding 80px 0 10px
+  padding 50px 20px 10px
 
 .footer-menu__title
-  color white
+  color $cor01
   display block
   font-size 14px
   font-weight 700
@@ -181,20 +62,26 @@
     margin-bottom 8px
 
   .a--0
-    color white
+    color #424242
     font-size 14px
     font-weight 400
     text-transform none
     transition all 150ms ease-in-out
 
     &:hover
-      color $cor03
+      color $cor01
 
 .footer-menu__phone
-  color white
+  color #424242
   font-size 14px
   font-weight 400
   text-transform none
+
+.footer a
+  color #424242
+
+  &:hover
+    color $cor01
 
 .pays__list
 .ships__list
@@ -308,12 +195,13 @@
 .copyright
   .std
   .std p
-    color #8a8a8a
-    font-size 12px
-    font-weight 400
+    color #c8c8c8
+    font-size 14px
+    font-weight 700
     line-height 18px
     margin 0
     text-align center
+    text-transform uppercase
 
 .social__title
   color black
@@ -408,4 +296,4 @@
     flex 1 1 250px
 
     &:first-child
-      flex 1 1 650px
+      flex 1 1 645px

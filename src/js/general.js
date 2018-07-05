@@ -1,4 +1,4 @@
-var lastScrollTop = 0;
+let lastScrollTop = 0;
 
 $j(window)
     .on('scroll', function() {
@@ -43,7 +43,37 @@ $j(document)
             $tabsItem         = $j('.tabs-list__item'),
             $categoryTitle    = $j('.category-title, .search-title'),
             $filtersList      = $j('.filters__list'),
-            $filtersFilter    = $j('.filters__filter');
+            $filtersFilter    = $j('.filters__filter'),
+            $showcaseTimer    = $j('.showcase-timer');
+
+
+          if($showcaseTimer.length > 0) {
+
+              $j.each($showcaseTimer, function(){
+                  let $this = $j(this);
+
+                  let countDownDate = new Date($j(this).data('to')).getTime();
+
+                  setInterval(function() {
+
+                      let now      = new Date().getTime();
+                      let distance = countDownDate - now;
+
+                      let days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+                      let hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                      $this.find('.showcase-timer__value--days').text((days < 10) ? `0${days}` : days);
+                      $this.find('.showcase-timer__value--hours').text((hours < 10) ? `0${hours}` : hours);
+                      $this.find('.showcase-timer__value--min').text((minutes < 10) ? `0${minutes}` : minutes);
+                      $this.find('.showcase-timer__value--sec').text((seconds < 10) ? `0${seconds}` : seconds);
+
+                  }, 1000);
+
+              });
+
+          }
 
 
           if($filtersList.length > 0) {

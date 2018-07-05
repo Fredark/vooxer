@@ -14,7 +14,7 @@
           </div>
       </div>
         <div class="header-lane__bottom">
-            {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="logo" imagem="wysiwyg/Loja/logo.png" imagem_mobile="wysiwyg/Loja/logo.png" alt_imagem="BodyWay" tag_html="div" tag_html_home="h1"}}
+            {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="logo" imagem="wysiwyg/Loja/logo.png" imagem_mobile="wysiwyg/Loja/logo.png" alt_imagem="Suple Hair" tag_html="div" tag_html_home="div"}}
 
             <div class="header__line">
                 <div class="menu--mobile">
@@ -43,23 +43,16 @@
     <div class="header-lane__desktop">
         <div class="header-lane__top">
             <div class="center top__center">
-                {{widget type="interface/widget_login" template="interface/widgets/login.phtml" identificador="account" login_convidado="<div class='welcome-message'>Olá, <strong>Visitante</strong>. Seja Bem Vindo!</div>" login_cliente="<div class='welcome-message'>Olá <strong>@nome-usuario</strong>. Seja Bem Vindo!</div>"}}
+                <span class="phone">
+                    Ligue agora
+                    <span class="icon--phone">{{config path="general/store_information/phone"}}</span>
+                </span>
                 <ul class="user-links">
                     <li class="user-links__item">
-                        <a class="user-links__link icon--user" href="/customer/account">
-                            Acesse sua Conta
-                        </a>
+                        {{widget type="interface/widget_login" template="interface/widgets/login.phtml" identificador="user" login_convidado="<div class='user icon--user'> <div class='user__info'> <a class='user__singup'>Cadastre-se</a><br> ou <a class='user__singin'>Faça login</a> </div></div>" login_cliente="<div class='user icon--user'> <div class='user__info'> <a class='user__singup'>MINHA CONTA</a><br> ou <a class='user__singin'>Sair</a> </div></div>"}}
                     </li>
                     <li class="user-links__item">
-                        <a class="user-links__link icon--cart" href="/checkout/cart/">
-                            Finalize sua Compra
-                        </a>
-                    </li>
-                    <li class="user-links__item">
-                        <span class="user-links__link user-links__link--phone">
-                            Televendas
-                            <span class="icon--phone">{{config path="general/store_information/phone"}}</span>
-                        </span>
+                        {{widget type="interface/widget_suacesta" template="interface/widgets/suacesta.phtml" identificador="cart" texto_singular="<a class='cart icon--cart' href='@url-carrinho'> <div class='cart__info'> <span class='cart__value'>R$0,00</span> <span class='cart__desc'>Finalizar compra</span> </div></a>" texto_plural="<a class='cart icon--cart' href='@url-carrinho'> <div class='cart__info'> <span class='cart__value'>R$0,00</span> <span class='cart__desc'>Finalizar compra</span> </div></a>"}}
                     </li>
                 </ul>
             </div>

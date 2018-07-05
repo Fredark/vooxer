@@ -1,68 +1,15 @@
-.main-container
-  .banners-lane
-  .showcase-lane
-    background-color white
-    margin-bottom 40px
+.col2-left-layout
+  .col-main
+    max-width 906px
+    overflow hidden
 
-.col-main .showcase-lane
-  margin-bottom 40px
+  .col-left
+    .showcase__title
+      max-width none
+      background linear-gradient(#01b8e3, #01b8e3 50%, $cor01 50%, $cor01 100%)
 
-.tabs-list
+body.cms-home .wrapper .main-container > *
+  @extend .center
+
+body.cms-home .wrapper .main-container > .main
   display flex
-  border-bottom 1px solid #f0f2f5
-  margin-bottom 25px
-
-.tabs-list__item
-  color #908e8f
-  border-bottom 1px solid transparent
-  cursor pointer
-  font-size 24px
-  font-weight 600
-  letter-spacing .25px
-  margin 0 40px -1px 0
-  transition all 150ms ease-in-out
-
-  &:hover
-    .std
-    &
-      color $cor01
-
-  &:last-child
-    margin-right 0
-
-  &.tabs-list__item--active
-    border-color $cor01
-
-    .std
-    &
-      color $cor01
-
-  .std
-  &
-    color #908e8f
-    font-size 24px
-    font-weight 600
-    letter-spacing .25px
-    line-height 60px
-    transition all 150ms ease-in-out
-
-.content-list__item
-  display none
-
-  &.content-list__item--active
-    display block
-
-#banner__bannersextras
-  .banner__wrapper
-    display flex
-    justify-content space-between
-
-    > *
-      flex 0 0 auto
-      width auto
-
-.banners-lane__center
-.showcase-lane__center
-  padding 10px 35px 25px
-  overflow hidden
-  width 100%
