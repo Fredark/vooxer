@@ -1,0 +1,114 @@
+extends /layout/layout.pug
+
+block content
+  -
+    const img = '/img/';
+    
+    const banners = [{
+        "image": "banner-1.jpg",
+        "title": "Nome do Serviço",
+        "desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "image": "banner-2.jpg",
+        "title": "Nome do Serviço",
+        "desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "image": "banner-3.jpg",
+        "title": "Nome do Serviço",
+        "desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "image": "banner-4.jpg",
+        "title": "Nome do Serviço",
+        "desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "image": "banner-5.jpg",
+        "title": "Nome do Serviço",
+        "desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      },
+      {
+        "image": "banner-6.jpg",
+        "title": "Nome do Serviço",
+        "desc":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+      }
+    ];
+    
+    const about = [{
+      "icon": "icon-clients.png",
+      "name": "Parceiros",
+      "value": "1.323"
+    },
+    {
+      "icon": "icon-clients.png",
+      "name": "Drones",
+      "value": "1.323"
+    },
+    {
+      "icon": "icon-clients.png",
+      "name": "Clientes",
+      "value": "1.323"
+    },
+    {
+      "icon": "icon-clients.png",
+      "name": "Takes Aéreos",
+      "value": "1.323"
+    }];
+  
+  
+  section.banner-home
+    div.center.banner-home__center
+      div.banner-home__env
+        h1.banner-home__title 
+          | O 
+          strong marketplace 
+          | de serviços com 
+          strong drones
+          
+        div.banner-home__buttons
+          a.banner-home__services(href='#') Conheça os Serviços
+          a.banner-home__partner(href='#') Seja um Parceiro
+
+  section.banners-extras
+    div.banners-extras__center.center
+      ul.banners-list
+        for banner in banners
+          li.banners-list__item
+            a.banners-list__link(href='#')
+              img.banners-list__img(src=img+banner.image, alt="")
+              div.banners-list__info
+                h2.banners-list__title= banner.title
+                p.banners-list__desc= banner.desc
+                
+  section.about-us
+    div.center.about-us__center
+      h2.about-us__title Sobre a Vooxer
+      p.about-us__desc
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        br
+        | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        
+      ul.about-list
+        for item in about
+          li.about-list__item
+            img.about-list__icon(src=img+item.icon, alt="")
+            div.about-list__info
+              span.about-list__number= item.value
+              span.about-list__name= item.name
+            
+            
+  section.budget
+    div.budget__center.center
+      div.budget__info
+        h2.budget__title Faça seu Orçamento
+        p.budget__desc
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          | sed do eiusmod tempor incididunt ut
+          
+        a.budget__link(href="#") Quero fazer um orçamento
+        
+    img.budget__logo(src=img+"logo-orcamento.png", alt="")
+                  
+                

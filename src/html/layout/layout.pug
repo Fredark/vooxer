@@ -1,0 +1,33 @@
+//- layout.pug
+html(lang='pt-br')
+  head
+    meta(name='viewport',content='width-device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible',content='ie=edge')
+    link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900",rel="stylesheet")
+    title Vooxer
+  body
+    header.header-lane
+      div.center.header-lane__center
+        a.logo(href="#")
+          img(src="img/logo.png", alt="Vooxer")
+
+        ul.user-list
+          li.user-list__item
+            a.buy-button(href="#") Faça seu Orçamento
+            
+          li.user-list__item
+            div.menu
+              span.menu__button
+              ul.menu__list
+                li.menu__item
+                  a.menu__link(href='#') Item 1
+                  a.menu__link(href='#') Item 2
+                  a.menu__link(href='#') Item 3
+                  
+    block content
+    section.map
+      | mapa
+    footer.footer-lane
+      div.center.footer-lane__center
+        p.copyright
+          | Todos os direitos reservados. 2018 - Vooxer Ltda

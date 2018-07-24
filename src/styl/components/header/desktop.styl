@@ -1,510 +1,76 @@
-.wrapper-container
-  padding-top 285px
-
-.header-container
-  background-color white
-  box-shadow none
-  left 0
-  top 0
+.header-lane
   position fixed
+  z-index 100
+  top 0
+  left 0
   width 100%
 
-  &:after
-    background-color rgba(0, 0, 0, .7)
-    content ''
-    left 0
-    height 100%
-    top 0
-    transition all 150ms ease-in-out
-    opacity 0
-    visibility hidden
-    position fixed
-    width 100%
-    z-index -1
-
-  @media (min-width 1201px)
-    &.mask--on:after
-      opacity 1
-      visibility visible
-      z-index 200
-
-
-
-.header
-  background-color white
-  box-shadow none
-  display block
-  padding 0
-  position relative
-  z-index 300
-
-.header-lane
-  background-color white
-  position relative
-  z-index 400
-
-  body.moving--down &
-    border-color $cor01
-    box-shadow 0 0 3px rgba(0, 0, 0, .2)
-
-.header-lane__right
-  flex 1 1 auto
-
-.header-lane__top
-  align-items stretch
-  border-bottom 1px solid #ededed
-  display flex
-  height 56px
-  overflow hidden
-  transition all 150ms ease-in-out
-
-  body.moving &
-    border 0 none
-    height 0
-
-  .phone
-    color #bababa
-    display inline-flex
-    align-items center
-    font-size 14px
-    font-weight 700
-    line-height 1
-    text-transform uppercase
-
-    span
-      line-height 1
-      color $cor01
-      flex 0 0 auto
-      font-size 12px
-      font-weight 500
-      margin-left 5px
-
-
-.user__info
-.user__singin
-  color #bababa
-  font-size 9px
-  font-weight 700
-  line-height 14px
-  text-transform uppercase
-
-.user__singup
-  color $cor01
-  cursor pointer
-  font-size 12px
-  font-weight 500
-  line-height 14px
-  text-transform uppercase
-
-  &:hover
-    text-decoration underline
-
-.user__singin
-  &:hover
-    color $cor01
-    text-decoration underline
-
-.top__center
-  align-items stretch
-  display flex
-  justify-content space-between
-
-.user-links
-  align-items stretch
-  display flex
-  flex 0 0 auto
-
-.header
-  .loginout
+  &__center
     align-items center
     display flex
     justify-content space-between
-    flex 2 1 auto
+    padding 40px 0
 
-  .search
-    margin 0
-    padding-top 6px
-    transition all 150ms ease-in-out
-    max-width 740px
-
-    &:hover
-      border-color $cor01
-
-    &.search--on
-      border-color $cor01
-
-      .search__label
-        border-color $cor01
-
-.icon--user
-  &:before
-    content url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAbCAYAAABm409WAAAB1ElEQVRIibXWz2rUUBTH8U9CsdpFtSKKVSrIrUJBEXdu9QlS9SH8t+hKCiKCRURRVIqPIG503kDc2SKoiLSogyhVFIqggtiBGl1kKqHNZDJ15kBIOPd3ft/cm9yTRNHDtyrGWZzAAUR4hQdpEm6XFUUVAEN4hEMtxudwLE3Cl6LBuI15jJkScxjDbFyrb1gPYAL72mhgBJPrAZyuYL4Sp+JafY1fGWAYezsA7CjSlwEK17RNrKkpA3zEYgfmP/GuE8Ay7nUAuJ8mYWl1sso+aKiwXGkSoqJ8u7doCLvwvUTzC3viWn1zXKv3VQUM4yW+Yje24BI+5DQLmEqTMICBpnYurtVH8kZFS7QV89iey13ADSxhm6wXLaIf53A9p/2GsTQJn1sBnmvdGh7jRfP6II620M2nSRgrApzBdIuiTuN8moRreUAkm95glwANDOYf8ngXzcmez/E84GQXzVdiPA/Y3wPAkTygvweATXnA6x4AZvKAKz0ATOUBT3Gxi+ZX0yQ8Wd2LLss2W+M/jJcxkSZhkuJmdxejuIn3HRgv4A5G0yTcWklW+R4clv1ZjMo6605sxA98whtZ/5pNk/B7dXFfi1nAn+b5WfOIcrl/kSah9O7+AuNIalNi8jAvAAAAAElFTkSuQmCC')
-    line-height 0
-    margin-right 15px
-
-.welcome-message
-  color #484848
-  font-size 14px
-  font-weight 600
-
-  .welcome-message__name
-  strong
-    color $cor01
-    font-weight 700
-    font-style italic
-
-.user-links__item
-  border-left 1px solid #dfdfdf
-  padding 0 20px
-  display flex
-  align-items center
-
-  &:last-child
-    padding-right 0
-
-  &:nth-child(2)
-    .user-links__link
-      color $cor02
-
-
-.user-links
-.user-links__link
-  color #484848
-  font-size 14px
-  font-weight 400
-
-.user-links__link
-  &:hover
-    text-decoration underline
-
-  &:hover
-    text-decoration none
-
-  span
-    margin-left 10px
-
-
-
-.header-lane__bottom
-  align-items center
-  background-color white
-  display flex
-  padding 23px 0 29px
-
-  body.moving &
-    padding 15px 0
-
-.icon--phone
-  &:before
-    content svg-inline(phone)
-    margin-right 5px
-
-.search__label
-  display none
-
-.search
-  background-color white
-
-  .search__input
-    background-color #f7f7f7
-    border 1px solid transparent !important
-    box-shadow none
-    border-radius 0
-    color #999
-    font-size 13px
-    font-weight 400
-    height 56px
-    letter-spacing .3px
-    line-height 18px
-    padding 11px 20px
-    transition all 150ms ease-in-out
-
-    &:focus
-      border 1px solid $cor01 !important
-      color #666
-
-    &::placeholder
-      color #999
-      font-size 13px
-      font-weight 400
-      letter-spacing .3px
-      line-height 18px
-
-.header
-  .center
-    padding 0 20px
-
-.search__button
-  background-color $cor01
-  border 0 none
-  border-radius 0
-  box-shadow none
-  line-height 0
-  height 56px
-  margin-left 14px
-  padding 3px 0
-  text-align center
-  width 140px
-
-  &:hover
-    background-color $cor01
-    border 0 none
-
-  span
-    display inline-block
-
-.cart__value
+.logo
   display block
-  color #00b158
-  font-size 12px
-  font-weight 600
-  line-height 14px
+  width 200px
 
-.cart__desc
-  color #bababa
-  font-size 9px
-  font-weight 700
-  line-height 14px
-  text-transform uppercase
-  transition all 150ms ease-in-out
+  img
+    max-width 100%
 
-.cart
-  &:hover
-    .cart__desc
-      color #00b158
-
-.icon--search
-  &:before
-    line-height 0
-    content url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAfCAYAAAD0ma06AAACWklEQVRIibWXu2tUQRSHv2wimERB4iOKYBQtRDCCQRBFVHwWRgyIf4GNUSsttBZsRMRWLLXQXlSiha8mmAiCCoqKxGcQg4EkisHPYu8kdyd3X9n1B4c9e86Z892ZvXfmboNKBVoHbEo+lyWxb8BLYAB4XkkTANRSdlTtt7wG1eNleqEWBW5Tn1UAivVC3VMt8FiZpiOJldLpSoEnijS4qR5WV6vz1FZ1ldqjXi8y5mw54O6MQY/VjcWuNmWd6r2M8T3FgI3qaFR8rQJQbFejHpPJaswAnosKH84CFuxO1OtyOt+gNgOjQFPypEwAS5PYbNQCDAOtqVgbMAKQA7pTMICLNcAAxoHzUezIlKdeiZago4blDNYe9bwRcjny21XQO+BDDbMLCtte0Nrg5IDFqcTrOsCC3qT8RQmLHIW/3+86An+l/DlAYwCOpRJtdQQuTPljwJ8AHEol1iexemhDyv8YnBz58yxoAbC9DrDNFN4b0wy1K7qF79bhsbgV9dwRcqHgVVTQXQNsf9TrfTofnF1R0aT5o6ha2Ap1Iup1MAuYtQw/1Z1VwLaqP6IeD+K69JcWdciZuqSuKQFaqV7IGPc2q75BC97algODwJKMO68PeAJ8AkxqtwB7gYaM+i/AIaC/IJpxFe3JUtRL+yyypLGdUj9X0XhYPaPez8gdqASI2qz2qreThrG+q33qSXV+MqbR/Htq5kzj37CU5gIdTO+RI+SPsvGM2ibgKYXbG0B3NcBq1Qw8ArpSsb//Ewj5mQ4AnSFQr5OhmCbJ/wmaejT+9wynOEAv8PUfBeI3J8YVMdgAAAAASUVORK5CYII=')
-
-.search__filter
-  display none
-
-.header
-  .mycart
-    height auto
-
-  .logo
-    margin-right 60px
-    flex 0 0 auto
-
-.icon--cart
-  &:before
-    content url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAbCAYAAACeA7ShAAABcklEQVRIia3UPU8UURTG8d9eliywyMuu0ZWSxEaxIYTa0oSwBYXhG9hpaCkI34COkpbSYGJj7KGiMaEnUFqJFppll+LO4DCZWU1mnmQyyT33/HPe7mk42VaiLj5gBzMI+Iw9nKeXRv3je4dmCWgJH/ECh7hEGxs4xVuc5J3KYAd4hTVcZM4Pk+8Ir/Et6xQKQOt4g3c5EPzCe0xjK+9YBHuJOXwpifomsa3k/YtgjTE2GOGPWKJG1lBUs6nkP1ECC1jEbd5QBLvCV/wsgQ1xhkES5b0amTmbzETUFmvz4HJGrcT2O4l0MOofD1PYJvYT0CBJYbKYg78pToid/YTdNM1lrI5x/pe+41HasdkKIOJza6WwZxVh85gKYgE7NcBaQezc44qwDtpB7MZiRVhAL4gzM18RBt0gPp+5GmALac2qNgCWAp4YP+3/q6dB3PV1qJuuk9pgVac/VS+gVxOsU2eao4DnNcFmmrgWt+awAijgxx1rwTbTBsStngAAAABJRU5ErkJggg==')
-    margin-right 15px
-
-.bottom__center
-  align-items flex-start
+.user-list
   display flex
-  justify-content space-between
-
-.header-offer
-  flex 0 0 auto
-  margin-left 15px
-  position relative
-
-  .products__list .flex-fix
-    display none
-
-  &:hover
-    .header-offer__dropdown
-      opacity 1
-      visibility visible
-
-  .products__list
-    margin 0
-
-  .products__item
-    margin 0
-    padding 0
-    min-width 0
-
-  .products__case
-    padding 10px 0
-    box-shadow none
-
-.header-offer__title
   align-items center
-  background-color $cor01
-  color white
-  display inline-flex
-  font-size 14px
-  line-height 42px
-  text-align center
-  justify-content center
-  text-transform uppercase
-  width 208px
 
-  &:after
-    border-top 4px solid white
-    border-left 5px solid transparent
-    border-right 5px solid transparent
-    content ''
-    flex 0 0 auto
-    margin-left 7px
+  &__item 
 
-.header-offer__dropdown
-  box-shadow 3px 3px 0 0 rgba(96, 96, 96, .38)
-  position absolute
-  top 100%
-  right 0
-  opacity 0
-  visibility hidden
+.banner-home
+  background url('/img/banner-home.jpg') no-repeat center top
+  background-attachment fixed
+  background-size 100%
 
-.menu-lane
-  background-color $cor01
-  margin-top 0
-  position relative
-  transition all 150ms ease-in-out
-  z-index 200
+  &__center
+    display flex
+    flex-wrap wrap
+    align-items center
+    height 90vh
 
-  body.moving--down &
-    margin-top -61px
+  &__env
+    max-width 410px
 
-.header-container .categories:not(.categories--mini)
-  margin 0
-  padding 0
+  &__title
+    color #272728
+    font-size 35px
+    font-weight 400
+    line-height 42px
+    text-transform uppercase
 
-.categories
-  background-color transparent
+    strong
+      font-weight 700
 
-  .li--0
-    flex 0 0 auto
+  &__buttons
+    display flex
+    justify-content space-between
+    margin-top 20px
+
+  &__services
+  &__partner
+    background-color $cor03
+    color white
+    font-size 18px
+    font-weight 400
+    line-height 40px
+    text-decoration none
+    padding-bottom 3px
+    width 195px
     text-align center
+    transition all 150ms ease-in-out
 
     &:hover
-      .a--0
-        background-color transparent
+      background-color $cor04
 
-  .a--0
-    border-bottom 2px solid transparent
-    display inline-block
-    padding 5px 0
-    transition all 150ms ease-in-out
-    width auto
+  &__partner
+    background-color $cor01
 
-    span
-      flex 0 0 auto
-
-    span
-      color white
-      font-size 12px
-      font-weight 400
-      letter-spacing 1px
-      text-transform uppercase
-      transition all 150ms ease-in-out
-
-.categories--justify
-  position relative
-
-  .ul--0
-    justify-content space-between
-    height 57px
-    padding-right 20px
-
-  .categories__all.li--0
-    flex 0 0 50px
-
-    .box--1
-      left 1px !important
-      height auto
-      max-height none
-      padding 0
-      top 56px
-      right 1px !important
-
-    .all-ul--1
-      display none
-
-    .all-ul--0
-      column-count 4
-      display block
-      height auto
-      max-height none
-      padding 24px 40px 30px
-      width 100%
-
-    .all-li--0
-      display inline-block
-      padding 0
-
-  .li--0
-    position relative
-
-    .box--1
-      align-items flex-start
-      background-color white
-      border 0 none
-      box-shadow none
-      display flex
-      height auto
-      left 0
-      right auto !important
-      top 28px
-      padding 30px 35px
-
-      .ul--1
-        flex 0 0 auto
-        margin 0
-        width auto
-
-      .li--1
-      .all-li--0
-        flex 0 0 auto
-        margin-right 50px
-        width 150px
-
-      .a--1
-      .all-a--0
-        padding 0
-
-        span
-          color #959595
-          display block
-          font-size 13px
-          font-weight 500
-          letter-spacing .5px
-          line-height 15px
-          padding 17px 0
-          text-align left
-          text-transform uppercase
-          transition all 150ms ease-in-out
-
-          &:hover
-            color $cor01
-
-.categories__products
-  .title
-    display none
-
-
-.categories__block
-  border 0 none
-  flex 0 0 auto
-  margin 0
-  order 0
-  padding 0
-
-.icon--menu
-  &:before
-    content svg-inline(menu)
-    transition all 150ms ease-in-out
-
-.header-lane__mobile
-  display none
-
-.categories__products, .categories__block
-  border 0 none
-
-.all-ul--1
-  display none
-
-.categories .products__case
-  height auto
-
-.categories__products .products__item, .categories__products.carrossel
-  margin 0
-
-.categories--justify .li--0.promo--products .box--1
-  padding-bottom 0
+    &:hover
+      background-color $cor02
