@@ -1,4 +1,21 @@
-//- layout.pug
+- 
+  const menu = [{
+    "name": "Item 1",
+    "link": "#"
+  },
+  {
+    "name": "Item 2",
+    "link": "#"
+  },
+  {
+    "name": "Item 3",
+    "link": "#"
+  },
+  {
+    "name": "Item 4",
+    "link": "#"
+  }]
+
 html(lang='pt-br')
   head
     meta(name='viewport',content='width-device-width, initial-scale=1.0')
@@ -18,15 +35,15 @@ html(lang='pt-br')
           li.user-list__item
             div.menu
               span.menu__button
+                span.menu__stick
               ul.menu__list
-                li.menu__item
-                  a.menu__link(href='#') Item 1
-                  a.menu__link(href='#') Item 2
-                  a.menu__link(href='#') Item 3
+                for item in menu
+                  li.menu__item
+                    a.menu__link(href=item.link)=item.name
                   
     block content
     section.map
-      | mapa
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.677894785804!2d-46.637502385103076!3d-23.544084866839444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58544746127f%3A0xcbfb8cbfee85031f!2sHeliponto+Banco+de+Boston+SDBT!5e0!3m2!1spt-BR!2sbr!4v1532486308131").map__iframe
     footer.footer-lane
       div.center.footer-lane__center
         p.copyright

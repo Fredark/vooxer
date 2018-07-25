@@ -1,10 +1,12 @@
+var $ = require('jquery');
 let lastScrollTop = 0;
 
-$j(window)
+$(window)
     .on('scroll', function() {
 
-        let pos   = $j(this).scrollTop(),
-            $body = $j('body');
+        let pos   = $(this).scrollTop(),
+            $body = $('body'),
+            $banners = $('.banners-extras').offset().top;
 
         if (pos > 100) {
             $body.addClass('moving');
@@ -17,18 +19,33 @@ $j(window)
                 $body.removeClass('moving--down');
             }
 
+            if(pos > $banners - 80) {
+              $body.addClass('header--on');
+            } else {
+              $body.removeClass('header--on');
+            }
+
             lastScrollTop = pos;
 
         } else {
-            $body.removeClass('moving')
+            $body.removeClass('moving');
+            $body.removeClass('header--on');
         }
     });
 
 
-$j(document)
+$(document)
     .ready(function () {
 
+      var $menu = $('.menu');
 
+      if($menu.length > 0) {
+        $menu.on('click', function(e){
+          if($(e.target).hasClass('menu__button') || $(e.target).hasClass('menu__stick')) {
+            $menu.toggleClass('menu--on');
+          }
+        });
+      }
 
     })
     .on('ajaxComplete', function(resp){
