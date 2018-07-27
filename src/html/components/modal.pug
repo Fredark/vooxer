@@ -1,0 +1,75 @@
+-
+  const services = [{
+      "text": "Serviço A",
+      "value": "1"
+    },
+    {
+      "text": "Serviço B",
+      "value": "2"
+    },
+    {
+      "text": "Serviço C",
+      "value": "3"
+  }];
+  
+  const products = [{
+      "text": "Vôo",
+      "value": "1"
+    },
+    {
+      "text": "Ortofoto",
+      "value": "2"
+    },
+    {
+      "text": "MDT",
+      "value": "3"
+    },
+    {
+      "text": "Vídeo",
+      "value": "4"
+    },
+    {
+      "text": "MDS",
+      "value": "5"
+    },
+    {
+      "text": "Restituição",
+      "value": "6"
+    }];
+
+div.modal.modal--budget
+  div.modal__content
+    span.modal__close X
+    h2.modal__title
+      | Faça um 
+      strong Orçamento
+      
+    div.modal__desc
+      form.modal__form.form-budget(action='/', method='POST')
+        div.form-budget__group
+          select.form-budget__input.form-budget__input--services(name='services', required=true)
+            option(selected) Tipos de serviços
+            for service in services
+              option(value=service.value)=service.text
+            
+          input.form-budget__input.form-budget__input--where(type='text', placeholder='Onde', name='where', required=true)
+            
+          div.form-budget__checks
+            label.form-budget__label Produtos
+            ul.checks-list
+              for product in products
+                li.checks-list__item
+                  input.checks-list__check(type='checkbox', name='product', value=product.value, id='product-'+product.value)
+                  label.checks-list__label(for='product-'+product.value)=product.text
+                  
+          input.form-budget__input.form-budget__input--when(type='text', placeholder='Quando', name='when', onfocus="(this.type='date')", onblur="(this.type='text')", required=true)
+            
+          input.form-budget__input.form-budget__input--area(type='text', placeholder='Tamanho da área', name='when', required=true)
+            
+          input.form-budget__input.form-budget__input--mesure(type='text', placeholder='Unidade de medida', name='mesure', required=true)
+            
+          input.form-budget__input.form-budget__input--file(type='file', name='file', required=true)
+            
+        textarea.form-budget__textarea(placeholder='Outras informações')
+        button.form-budget__button(type='submit') Ver preços
+    

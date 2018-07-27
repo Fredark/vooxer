@@ -5,11 +5,11 @@ $(window)
     .on('scroll', function() {
 
         let pos   = $(this).scrollTop(),
-            $body = $('body'),
-            $banners = $('.banners-extras').offset().top;
+            $body = $('body');
 
         if (pos > 100) {
             $body.addClass('moving');
+            $body.addClass('header--on');
 
             if (pos > lastScrollTop) {
                 if(!$body.hasClass('moving--down')) {
@@ -17,12 +17,6 @@ $(window)
                 }
             } else {
                 $body.removeClass('moving--down');
-            }
-
-            if(pos > $banners - 80) {
-              $body.addClass('header--on');
-            } else {
-              $body.removeClass('header--on');
             }
 
             lastScrollTop = pos;
@@ -37,7 +31,34 @@ $(window)
 $(document)
     .ready(function () {
 
-      var $menu = $('.menu');
+      var $menu        = $('.menu'),
+          $modalButton = $('.modal-button'),
+          $modal       = $('.modal'),
+          $closeModal  = $('.modal__close');
+
+      if($modalButton.length > 0) {
+        $modalButton.on('click', function(){
+          $('body').addClass('modal--on');
+          $('.modal--' + $(this).data('target')).addClass('modal--on');
+        });
+      }
+
+      if($modal.length > 0) {
+        $modal.on('click', function(e){
+          if($(e.target).hasClass('modal')) {
+            $('body').removeClass('modal--on');
+            $(this).removeClass('modal--on');
+          }
+        });
+      }
+
+
+      if($closeModal.length > 0) {
+        $closeModal.on('click', function(){
+          $('body').removeClass('modal--on');
+          $(this).parents('.modal').removeClass('modal--on');
+        });
+      }
 
       if($menu.length > 0) {
         $menu.on('click', function(e){

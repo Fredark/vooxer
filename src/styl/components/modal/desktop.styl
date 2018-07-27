@@ -1,0 +1,207 @@
+body.modal--on
+  overflow hidden
+
+.modal-button
+  cursor pointer
+
+.modal
+  align-items center
+  display flex
+  justify-content center
+  top 0
+  height 100%
+  left 0
+  position fixed
+  background-color rgba(0, 0, 0, .5)
+  opacity 0
+  visibility hidden
+  width 100%
+  z-index -1
+  transition all 150ms ease-in-out
+
+  &.modal--on
+    opacity 1
+    visibility visible
+    z-index 300
+
+  &__content
+    background-color white
+    height 90vh
+    max-width 694px
+    max-height 624px
+    padding 45px 20px
+    position relative
+    width 90vw
+
+  &__desc
+    height calc(100% - 81px)
+    margin 0 auto
+    overflow auto
+    max-width 525px
+
+  &__close
+    cursor pointer
+    position absolute
+    right 20px
+    top 20px
+    color #505050
+    font-size 25px
+    font-weight 700
+    text-transform uppercase
+    transition all 150ms ease-in-out
+
+    &:hover
+      color red
+
+  &__title
+    color $cor01
+    font-size 36px
+    font-weight 400
+    letter-spacing -.1px
+    margin-bottom 45px
+    text-align center
+    text-transform uppercase
+
+    strong
+      font-weight 700
+
+.form-budget
+  &__group
+    display flex
+    flex-flow column wrap
+    max-height 250px
+
+    > *
+      margin 10px
+      width calc(50% - 20px)
+
+  &__input
+    background-color white
+    background-position right 10px center
+    background-repeat no-repeat
+    border 1px solid #cfcfcf
+    border-radius 5px
+    color #606060
+    font-size 14px
+    font-weight 400
+    letter-spacing -.1px
+    line-height 18px
+    height 42px
+    padding 12px 40px 12px 15px
+    transition all 150ms ease-in-out
+
+
+    &--when
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+LUNEtwAAAeRJREFUOI2t1DtoVFEQxvFfdNlCBUMUy6AQEKKJwTo2aUQRY2EhmyL3giCIL9DGRiSkFV8QEISTZiGFkCgK2oigdYoYO0FNYSGBENEURtTizspyzWONDhzmmzPDn5l7zzltWZZpslu4iD14b33bjXe4nVK61NishO/FQXRHfBLzLUB3hu/O8zzDdEpppi3LsnO42wKgVTtfwSg+4jKGcAxn8KkFwC7cw2PUcQOjFWzHC0zgAA7hKeZagHZiEbMppYk8z09hsFIquhqrVZtLKbWXN9uyLPuJ7/j6F7DVbCsqjU4XMfsfoPuxowF9hRMboaSUfus8z6cwuKlUM4aR0Kcxji3oD90f8Xjk5Xk+kuf5WDOkDK3heOh+DKOKrtBdEQ9HXtTXmiHlv9+r+GlwBdfxGQ8Ux24eS4pr/CXqjpY55U57sDd0J/qwGR2hOyLui7yo71kLWsfN0BcwqTgmA6EHIp6MvKivN0PK459tGut+jLykOB15+KXQb6PuGratBX2CH6GnFWd3WXFlpwK4HPobpJQelRh/jP8BL0OPYUHxNtRC1yJeiPyKtlKnjddpGu1NnT4Mvxx6ej1oNfxQU+5OLHgeq2Gr3b4qxYMyg314Jr7TBq2Kw3hTie7qOPIPwIa9xtAvHrV4iUrKMDIAAAAASUVORK5CYII=')
+
+      &:focus
+        background-image none
+        padding-right 15px
+
+    &--where
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAB7klEQVQ4jX3TW2iPcRgH8I/X1HIhiq3I4Qo3sgtlhWRXtovlMBe72sxEiSmprRwuHGqXZMPiarnAsAspOaQcVnJKCKWh3K0cmqsZLn7PX693h6eeevt+v8/3/f2e3/NMaW5uVohV2IYazAvsC+7iPB7mxWW575kh2ISX6MW74JagHltxNX7wLW8wG/dRiS24gj+Fkx3CZvRgAGswlAXZizmoRl+ueEGkwPpCUxE1MtRiPVrxPsT1GMSnyMHAhKY1amozNOEF+kNQF9/PpEbW4HlgdaG5Fn1qKsNanMvd9RjuoCF3lXu4FdyNwK6jJYvGfc4ZLMdl/zfxDy4FV4qPqMzwC+U54jvmGxsLgytFOUYzvMbKHHEBewtYNfYEl8deZVJzNkpPA+1SUwfwOPJRYO2hqcAG9Gfowgg6gxzGOjTiSWRjYMOhOY5RdJVhCB3ojiPejr5cjCzGammUd8tN4hk8kMZ0+jhFpZiGs3Gq06RJJD3TdszFkUkM9mEpdsYV/hnAWxxFG1aMU7xIWqhTeFoCs4KoE2+kySwrcN34ioN5sGgwIi3KMuzP4Q3S0rXhx2QGpHc/icNYjBk4Ie1AX1FcPGYpDkiD0iNt3SzsGk84kcFP7MBNaVs7pOUZE1Orqqom8PBBWiBowe/xRH8BOjp2L2IDYkUAAAAASUVORK5CYII=')
+
+    &--area
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABbUlEQVQ4jdXTv0vUcRzH8cd559DmIJFC5OTS4LflIBrMxSEQoj9AvzcdOrQFTQkt1iChQw4OZ6SDS0sQDaKCQtF2u8W51C0pOXRFRA33Ofz49eslbb7hw5f36/P+PN8/Pt9PIU3TBvqctCrW5VsVTzNao4RrwdnGC/zGxhkQeI0fKGAaZQz1hM0t3MYlvMTXLqDPIeGVANmGUth8jB08D/5SFxA8xBxm0MKNUrQ5G8R/wWLIEqagmCRJE5vafe/iJ56FkvczkLtYjiDQxKdCmqZ5We/gHQ4z+gCuiy6jVqvheEZZe3OG/iWsU9aTJ/6PXRxQFSM5+k1M5h0o4T5WcRC0J3iACdQz8cNYwWCIU6lUBjFRTJLkPd6iEUEm8SoncV37P5sL313cw3x8/TFkLa/8KO47FoLf7LQGjzB6DkjHFvFL+zl94HjYY6G9XqS43AVyNcS0tJ9RuVPRR/TjVlh/cCR/RjCO+cj/hr2/4exTke1uLfoAAAAASUVORK5CYII=')
+
+    &--mesure
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAOCAYAAAAxDQxDAAABBElEQVQ4je3UPUpDQRSG4SdysRAFQRDXYK+NjS7APUxKrQTdgr2d5WQJwUIUFNKKjZ0gUUQLo4KEEPyDGAtHklxCCEJS+cEU7znMeac4TCGEsIwpnczjKcfPaCeeQx2txLN4w0fimdR77ZpRzXCEg67iOo7xmXgN52gmXkEVj4mXUMN94sUkvU68gIcMdwhdogtspldDGTu4TVxKp5J4D5UYYxmKxeIW6jHGUuJVhAljStanto3GgDv7uBzQP8T7MKLTHLd1FgHOcv0Wvn4hxnjVz95PlM+G3i3MZ1fvhvXNMKLaoGaM8WWIGca2DP+iP6cQQmjgZoSOaZxkfv6iyRGKoPkNcttB4I1YNUcAAAAASUVORK5CYII=')
+
+    &::placeholder
+      color #606060
+      font-size 14px
+      font-weight 400
+      letter-spacing -.1px
+      line-height 18px
+
+    &:hover
+      border-color $cor01
+
+    &:focus
+      border-color $cor01
+      color #000
+      outline none
+
+  &__checks
+    border 1px solid #cfcfcf
+    border-radius 5px
+    padding 6px 15px
+
+  &__label
+    color #606060
+    display block
+    font-size 14px
+    font-weight 400
+    letter-spacing -.1px
+    line-height 18px
+    margin-bottom 6px
+
+  &__textarea
+    background-color white
+    border 1px solid #cfcfcf
+    border-radius 5px
+    color #606060
+    font-size 14px
+    font-weight 400
+    flex 1 1 auto
+    height 112px
+    letter-spacing -.1px
+    line-height 18px
+    margin 10px
+    padding 15px
+    transition all 150ms ease-in-out
+    width calc(100% - 20px)
+
+    &:hover
+      border-color $cor01
+
+    &:focus
+      border-color $cor01
+      color #000
+      outline none
+
+  &__button
+    background-color $cor03
+    border 0 none
+    border-radius 5px
+    color white
+    cursor pointer
+    display block
+    font-size 18px
+    font-weight 400
+    line-height 38px
+    margin 10px auto 0
+    text-align center
+    text-transform uppercase
+    width calc(100% - 20px)
+    transition all 150ms ease-in-out
+
+    &:hover
+      background-color $cor04
+
+
+.checks-list
+  display flex
+  flex-flow row wrap
+
+  &__item
+    align-items center
+    display flex
+    flex 0 0 80px
+    user-select none
+    margin 2px 0
+
+  &__label
+    color #606060
+    font-size 12px
+    font-weight 400
+    transition all 150ms ease-in-out
+
+    &:hover
+      color $cor01
+
+  &__check
+    margin 3px 5px 3px 0
+
+    &:checked + .checks-list__label
+      color $cor01

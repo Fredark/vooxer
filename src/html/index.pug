@@ -107,8 +107,11 @@ block content
           | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           | sed do eiusmod tempor incididunt ut
           
-        a.budget__link(href="#") Quero fazer um orçamento
+        span.budget__link.modal-button(data-target='budget') Quero fazer um orçamento
         
       img.budget__logo(src=img+"logo-orcamento.png", alt="")
+  
+block modal
+  include /components/modal.pug
                   
                 
