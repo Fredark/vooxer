@@ -13,3 +13,6 @@ Rodar o projeto em DEV:
 Preparar os arquivos para deploy:
 
 `npm run build`
+
+
+Os arquivos compilados vão para a pasta "dist" na raíz do projeto.
